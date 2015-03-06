@@ -24,16 +24,7 @@ normative:
 
 informative:
   RFC5389:
-  I-D.ietf-behave-turn:
-  STUNT:
-    target: http://deusty.blogspot.com/2007/09/stunt-out-of-band-channels.html
-    title: STUNT & out-of-band channels
-    author:
-      name: Robbie Hanson
-      ins: R. Hanson
-    date: 2007-09-17
-  I-D.meyer-xmpp-e2e-encryption:
-  I-D.ietf-xmpp-3920bis:
+  I-D.thomson-webpush-http2:
 
 
 
