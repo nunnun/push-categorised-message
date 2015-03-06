@@ -1,14 +1,12 @@
 language: python
-
 before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -y python-lxml python-pip
+- sudo apt-get update -qq
+- sudo apt-get install -y python-lxml python-pip
 install:
- # here we don't use the travis default virtualenv because that
- # causes us to install lxml again below, doubling the build time
- # when it compiles the native modules from source
- - deactivate
- - gem install kramdown-rfc2629
- - sudo pip install xml2rfc
-
+- deactivate
+- gem install kramdown-rfc2629
+- sudo pip install xml2rfc
 script: make ghpages
+env:
+  global:
+    secure: C9NY5f4aIbK3/cTu9f9/kPmiHuicey/rJ/Nc+ui5zWzfuhP6En/nmACf6lAwXQtAr+VvOp5I0GFcXujOsABMqvkVQPM0hVu/2s4gSsqKQVxIishspvEFQp6di2/IAajoNRI5j6yRnb9Mdf+w55WWgZB9TPMKUXO5M082YnPb1fI=
