@@ -1,5 +1,7 @@
 # Web Push Categorized Message
 
+[![Build Status](https://travis-ci.org/nunnun/push-categorised-message.svg?branch=master)](https://travis-ci.org/nunnun/push-categorised-message)
+
 This is the working area for the [IETF WebPush Working
 Group](https://trac.tools.ietf.org/wg/webpush/trac/wiki) draft of Web Push Categorized Message
 
