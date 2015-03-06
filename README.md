@@ -3,7 +3,7 @@
 This is the working area for the [IETF WebPush Working
 Group](https://trac.tools.ietf.org/wg/webpush/trac/wiki) draft of Web Push Categorized Message
 
-* [Editor's copy]()
+* [Editor's copy](https://nunnun.github.io/push-categorised-message/)
 * [Working Group Draft] (https://tools.ietf.org/html/draft-nakajima-webpush-push-categorized-message)
 
 
