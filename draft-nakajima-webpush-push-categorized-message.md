@@ -22,6 +22,8 @@ normative:
 
 informative:
   I-D.thomson-webpush-http2:
+  I-D.ietf-httpbis-http2:
+  I-D.thomson-webpush-aggregate:
 
 --- abstract
 
@@ -48,7 +50,7 @@ established shorthands for expressing interoperability requirements on
 implementations: the capitalized words "MUST", "MUST NOT", "SHOULD" and "MAY".
 The meaning of these is described in {{RFC2119}}.
 
-# Categorized push subscribe {#category}
+# Categorized push subscription {#category}
 
 A new header field "Push-Category" is provided in subscribe request to indicate priority of new subscription.
 
@@ -60,12 +62,13 @@ The "Push-Category" HTTP header field is an OPTIONAL header field that, when use
 
 The following categories are defined:
 
-normal: "normal" 
+normal: "normal" category indicates that push subscription 
 
-important:
+important: "important" category indicates that push channel MUST be delivered prior to "normal" push channel. Application MUST send a push message with stream which has a higher weight compared to Default stream priorities defined at {{I-D.ietf-httpbis-http2}}.
 
-emergency:
+emergency: "emergency" category indicates that push channel MUST be delivered prior to any other categorized or uncategorized push channel. User Agent MUST send a aggregated channel creation request {{I-D.thomson-webpush-aggregate}}. Application MUST send a push message with stream which has a highest weight compared to other stream on the connection.
 
+# Security Considerations
 
 # IANA Considerations
 
