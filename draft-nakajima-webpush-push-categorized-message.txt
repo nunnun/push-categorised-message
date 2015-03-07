@@ -65,12 +65,13 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   2
-   3.  Categorized push subscribe  . . . . . . . . . . . . . . . . .   2
-   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
-   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     5.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
-     5.2.  Informative References  . . . . . . . . . . . . . . . . .   3
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Categorized push subscription . . . . . . . . . . . . . . . .   2
+   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
+   5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
 
@@ -92,7 +93,7 @@ Table of Contents
    words "MUST", "MUST NOT", "SHOULD" and "MAY".  The meaning of these
    is described in [RFC2119].
 
-3.  Categorized push subscribe
+3.  Categorized push subscription
 
    A new header field "Push-Category" is provided in subscribe request
    to indicate priority of new subscription.
@@ -108,19 +109,28 @@ Table of Contents
 
 
 
-
 Nakajima                Expires September 8, 2015               [Page 2]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
 
-   normal: "normal"
+   normal: "normal" category indicates that push subscription
 
-   important:
+   important: "important" category indicates that push channel MUST be
+   delivered prior to "normal" push channel.  Application MUST send a
+   push message with stream which has a higher weight compared to
+   Default stream priorities defined at [I-D.ietf-httpbis-http2].
 
-   emergency:
+   emergency: "emergency" category indicates that push channel MUST be
+   delivered prior to any other categorized or uncategorized push
+   channel.  User Agent MUST send a aggregated channel creation request
+   [I-D.thomson-webpush-aggregate].  Application MUST send a push
+   message with stream which has a highest weight compared to other
+   stream on the connection.
 
-4.  IANA Considerations
+4.  Security Considerations
+
+5.  IANA Considerations
 
    This document specifies the HTTP header field listed below, which has
    been added to the "Permanent Message Header Field Names" registry
@@ -131,9 +141,9 @@ Internet-Draft        Web Push Categorized Message            March 2015
    Engineering Task Force Specification document(s): this specification
    Related information: None
 
-5.  References
+6.  References
 
-5.1.  Normative References
+6.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997.
@@ -142,7 +152,28 @@ Internet-Draft        Web Push Categorized Message            March 2015
               Procedures for Message Header Fields", BCP 90, RFC 3864,
               September 2004.
 
-5.2.  Informative References
+6.2.  Informative References
+
+   [I-D.ietf-httpbis-http2]
+              Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
+              Protocol version 2", draft-ietf-httpbis-http2-17 (work in
+              progress), February 2015.
+
+
+
+
+
+
+
+Nakajima                Expires September 8, 2015               [Page 3]
+
+Internet-Draft        Web Push Categorized Message            March 2015
+
+
+   [I-D.thomson-webpush-aggregate]
+              Thomson, M., "Web Push Channel Aggregation", draft-
+              thomson-webpush-aggregate-00 (work in progress), October
+              2014.
 
    [I-D.thomson-webpush-http2]
               Thomson, M., "Generic Event Delivery Using HTTP Push",
@@ -165,4 +196,29 @@ Author's Address
 
 
 
-Nakajima                Expires September 8, 2015               [Page 3]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nakajima                Expires September 8, 2015               [Page 4]
