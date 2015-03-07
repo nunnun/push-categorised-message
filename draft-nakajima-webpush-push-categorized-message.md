@@ -79,6 +79,7 @@ This document specifies the HTTP header field listed below, which has
 been added to the "Permanent Message Header Field Names" registry 
 defined in {{RFC3864}}.
 
+~~~~~~~~~~
 Header field: Push-Catagory
 Applicable protocol: http
 Status: standard
@@ -87,4 +88,5 @@ Auther/Change controller:
   Internet Engineering Task Force
 Specification document(s): this specification
 Related information: None
+~~~~~~~~~~
 
