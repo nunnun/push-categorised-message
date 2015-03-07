@@ -559,7 +559,50 @@ Push-Category: Normal
 <p id="rfc.section.3.p.3">The following categories are defined:</p>
 <p id="rfc.section.3.p.4">normal: &#8220;normal&#8221; category indicates that push subscription</p>
 <p id="rfc.section.3.p.5">important: &#8220;important&#8221; category indicates that push channel MUST be delivered prior to &#8220;normal&#8221; push channel. Application MUST send a push message with stream which has a higher weight compared to Default stream priorities defined at <a href="#I-D.ietf-httpbis-http2">[I-D.ietf-httpbis-http2]</a>.</p>
+<pre>
+    +-------+           +--------------+       +-------------+
+    |  UA   |           | Push Service |       | Application |
+    +-------+           +--------------+       +-------------+
+        |                      |                      |
+        |      Register        |                      |
+        |---------------------&gt;|                      |
+        |       Monitor        |                      |
+        |&lt;====================&gt;|                      |
+        |      Subscribe       |                      |
+        |---------------------&gt;|                      |
+        |           Provide Subscription              |
+        |--------------------------------------------&gt;|
+        |                      |                      |
+        :                      :                      :
+        |                      |     Push Message     |
+        |                      | with PRIORITY header |
+        |    Push Message      |&lt;---------------------|
+        |&lt;---------------------|                      |
+        |                      |                      |
+</pre>
 <p id="rfc.section.3.p.6">emergency: &#8220;emergency&#8221; category indicates that push channel MUST be delivered prior to any other categorized or uncategorized push channel. User Agent MUST send a aggregated channel creation request <a href="#I-D.thomson-webpush-aggregate">[I-D.thomson-webpush-aggregate]</a>. Application MUST send a push message with stream which has a highest weight compared to other stream on the connection.</p>
+<pre>
+    +-------+           +--------------+       +-------------+
+    |  UA   |           | Push Service |       | Application |
+    +-------+           +--------------+       +-------------+
+        |                      |                      |
+        |      Register        |                      |
+        |---------------------&gt;|                      |
+        |       Monitor        |                      |
+        |&lt;====================&gt;|                      |
+        |      Subscribe       |                      |
+        | (Aggregated Channel) |                      |
+        |---------------------&gt;|                      |
+        |           Provide Subscription              |
+        |--------------------------------------------&gt;|
+        |                      |                      |
+        :                      :                      :
+        |                      |     Push Message     |
+        |                      | with PRIORITY header |
+        |    Push Message      |&lt;---------------------|
+        |&lt;---------------------|                      |
+        |                      |                      |
+</pre>
 <h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
 <h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a></h1>
 <p id="rfc.section.5.p.1">This document specifies the HTTP header field listed below, which has been added to the &#8220;Permanent Message Header Field Names&#8221; registry defined in <a href="#RFC3864">[RFC3864]</a>.</p>
