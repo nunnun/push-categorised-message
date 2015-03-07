@@ -18,11 +18,10 @@ author:
 
 normative:
   RFC2119:
+  RFC3864:
 
 informative:
   I-D.thomson-webpush-http2:
-
-
 
 --- abstract
 
@@ -31,7 +30,7 @@ based on the registration made by the application.
 This document describes extentions to that protocol that enables the 
 categorized message delivery based on priority.
 
-This allows an application to request that a web push server deliver the emergency message to a registered client.
+This allows an application to request that a web push server deliver the prioritized message to a registered client.
 
 --- middle
 
@@ -49,8 +48,37 @@ established shorthands for expressing interoperability requirements on
 implementations: the capitalized words "MUST", "MUST NOT", "SHOULD" and "MAY".
 The meaning of these is described in {{RFC2119}}.
 
-# Categorized push subscribe
+# Categorized push subscribe {#category}
 
-A new push "subscribe"  
+A new header field "Push-Category" is provided in subscribe request to indicate priority of new subscription.
 
+POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1
+Host: push.example.net
+Push-Category: Normal
+
+The "Push-Category" HTTP header field is an OPTIONAL header field that, when used, indicates a priority of push subscription and its delivery.
+
+The following categories are defined:
+
+normal: "normal" 
+
+important:
+
+emergency:
+
+
+# IANA Considerations
+
+This document specifies the HTTP header field listed below, which has 
+been added to the "Permanent Message Header Field Names" registry 
+defined in {{RFC3864}}.
+
+Header field: Push-Catagory
+Applicable protocol: http
+Status: standard
+Auther/Change controller:
+  IETF (iesg@ietf.org)
+  Internet Engineering Task Force
+Specification document(s): this specification
+Related information: None
 
