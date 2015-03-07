@@ -18,12 +18,8 @@ author:
 
 normative:
   RFC2119:
-  RFC3986:
-  RFC4086:
-  RFC4648:
 
 informative:
-  RFC5389:
   I-D.thomson-webpush-http2:
 
 
