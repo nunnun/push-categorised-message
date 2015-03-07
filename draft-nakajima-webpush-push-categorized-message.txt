@@ -70,7 +70,7 @@ Table of Contents
    5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
-     6.2.  Informative References  . . . . . . . . . . . . . . . . .   3
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   4
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
@@ -96,15 +96,15 @@ Table of Contents
 3.  Categorized push subscription
 
    A new header field "Push-Category" is provided in subscribe request
-   to indicate priority of new subscription.  ~~~~~~~~~~ POST
-   /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1 Host: push.example.net
-   Push-Category: Normal ~~~~~~~~~~
+   to indicate priority of new subscription.
 
-   The "Push-Category" HTTP header field is an OPTIONAL header field
-   that, when used, indicates a priority of push subscription and its
-   delivery.
+   POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1
+   Host: push.example.net
+   Push-Category: Normal
 
-   The following categories are defined:
+   Figure 1: Example of push subscribe request with Push-Category header
+
+
 
 
 
@@ -113,6 +113,12 @@ Nakajima                Expires September 8, 2015               [Page 2]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
+
+   The "Push-Category" HTTP header field is an OPTIONAL header field
+   that, when used, indicates a priority of push subscription and its
+   delivery.
+
+   The following categories are defined:
 
    normal: "normal" category indicates that push subscription
 
@@ -152,12 +158,6 @@ Internet-Draft        Web Push Categorized Message            March 2015
               Procedures for Message Header Fields", BCP 90, RFC 3864,
               September 2004.
 
-6.2.  Informative References
-
-   [I-D.ietf-httpbis-http2]
-              Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
-              Protocol version 2", draft-ietf-httpbis-http2-17 (work in
-              progress), February 2015.
 
 
 
@@ -169,6 +169,13 @@ Nakajima                Expires September 8, 2015               [Page 3]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
+
+6.2.  Informative References
+
+   [I-D.ietf-httpbis-http2]
+              Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
+              Protocol version 2", draft-ietf-httpbis-http2-17 (work in
+              progress), February 2015.
 
    [I-D.thomson-webpush-aggregate]
               Thomson, M., "Web Push Channel Aggregation", draft-
@@ -186,13 +193,6 @@ Author's Address
    Keio University
 
    Email: hiro@awa.sfc.keio.ac.jp
-
-
-
-
-
-
-
 
 
 

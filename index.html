@@ -546,7 +546,15 @@ ul.toc a:first-child {
 <h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#terminology" id="terminology">Terminology</a></h1>
 <p id="rfc.section.2.p.1">In cases where normative language needs to be emphasized, this document back on established shorthands for expressing interoperability requirements on implementations: the capitalized words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;SHOULD&#8221; and &#8220;MAY&#8221;.  The meaning of these is described in <a href="#RFC2119">[RFC2119]</a>.</p>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#category" id="category">Categorized push subscription</a></h1>
-<p id="rfc.section.3.p.1">A new header field &#8220;Push-Category&#8221; is provided in subscribe request to indicate priority of new subscription.  ~~~~~~~~~~ POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1 Host: push.example.net Push-Category: Normal ~~~~~~~~~~</p>
+<p id="rfc.section.3.p.1">A new header field &#8220;Push-Category&#8221; is provided in subscribe request to indicate priority of new subscription.</p>
+<div id="rfc.figure.1"/>
+<div id="figxmpstore"/>
+<pre>
+POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1
+Host: push.example.net
+Push-Category: Normal
+</pre>
+<p class="figure">Figure 1: Example of push subscribe request with Push-Category header</p>
 <p id="rfc.section.3.p.2">The &#8220;Push-Category&#8221; HTTP header field is an OPTIONAL header field that, when used, indicates a priority of push subscription and its delivery.</p>
 <p id="rfc.section.3.p.3">The following categories are defined:</p>
 <p id="rfc.section.3.p.4">normal: &#8220;normal&#8221; category indicates that push subscription</p>
