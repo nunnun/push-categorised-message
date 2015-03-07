@@ -69,7 +69,52 @@ normal: "normal" category indicates that push subscription
 
 important: "important" category indicates that push channel MUST be delivered prior to "normal" push channel. Application MUST send a push message with stream which has a higher weight compared to Default stream priorities defined at {{I-D.ietf-httpbis-http2}}.
 
+~~~~~~~~~~
+    +-------+           +--------------+       +-------------+
+    |  UA   |           | Push Service |       | Application |
+    +-------+           +--------------+       +-------------+
+        |                      |                      |
+        |      Register        |                      |
+        |--------------------->|                      |
+        |       Monitor        |                      |
+        |<====================>|                      |
+        |      Subscribe       |                      |
+        |--------------------->|                      |
+        |           Provide Subscription              |
+        |-------------------------------------------->|
+        |                      |                      |
+        :                      :                      :
+        |                      |     Push Message     |
+        |                      | with PRIORITY header |
+        |    Push Message      |<---------------------|
+        |<---------------------|                      |
+        |                      |                      |
+~~~~~~~~~~
+
 emergency: "emergency" category indicates that push channel MUST be delivered prior to any other categorized or uncategorized push channel. User Agent MUST send a aggregated channel creation request {{I-D.thomson-webpush-aggregate}}. Application MUST send a push message with stream which has a highest weight compared to other stream on the connection.
+
+~~~~~~~~~~
+    +-------+           +--------------+       +-------------+
+    |  UA   |           | Push Service |       | Application |
+    +-------+           +--------------+       +-------------+
+        |                      |                      |
+        |      Register        |                      |
+        |--------------------->|                      |
+        |       Monitor        |                      |
+        |<====================>|                      |
+        |      Subscribe       |                      |
+        | (Aggregated Channel) |                      |
+        |--------------------->|                      |
+        |           Provide Subscription              |
+        |-------------------------------------------->|
+        |                      |                      |
+        :                      :                      :
+        |                      |     Push Message     |
+        |                      | with PRIORITY header |
+        |    Push Message      |<---------------------|
+        |<---------------------|                      |
+        |                      |                      |
+~~~~~~~~~~
 
 # Security Considerations
 
