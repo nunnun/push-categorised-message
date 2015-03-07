@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Nakajima
 Internet-Draft                                           Keio University
-Intended status: Standards Track                           March 6, 2015
-Expires: September 7, 2015
+Intended status: Standards Track                           March 7, 2015
+Expires: September 8, 2015
 
 
                     Categorized Message for Web Push
@@ -19,7 +19,7 @@ Abstract
    categorized message delivery based on priority.
 
    This allows an application to request that a web push server deliver
-   the emergency message to a registered client.
+   the prioritized message to a registered client.
 
 Status of This Memo
 
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 7, 2015.
+   This Internet-Draft will expire on September 8, 2015.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Nakajima                Expires September 7, 2015               [Page 1]
+Nakajima                Expires September 8, 2015               [Page 1]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
@@ -66,9 +66,10 @@ Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   2
    3.  Categorized push subscribe  . . . . . . . . . . . . . . . . .   2
-   4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   2
-     4.1.  Normative References  . . . . . . . . . . . . . . . . . .   2
-     4.2.  Informative References  . . . . . . . . . . . . . . . . .   3
+   4.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
+   5.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     5.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
+     5.2.  Informative References  . . . . . . . . . . . . . . . . .   3
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   3
 
 1.  Introduction
@@ -93,43 +94,60 @@ Table of Contents
 
 3.  Categorized push subscribe
 
-   A new push "subscribe"
+   A new header field "Push-Category" is provided in subscribe request
+   to indicate priority of new subscription.
 
-4.  References
+   POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1 Host:
+   push.example.net Push-Category: Normal
 
-4.1.  Normative References
+   The "Push-Category" HTTP header field is an OPTIONAL header field
+   that, when used, indicates a priority of push subscription and its
+   delivery.
 
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119, March 1997.
-
-   [RFC3986]  Berners-Lee, T., Fielding, R., and L. Masinter, "Uniform
-              Resource Identifier (URI): Generic Syntax", STD 66, RFC
-              3986, January 2005.
-
+   The following categories are defined:
 
 
 
-Nakajima                Expires September 7, 2015               [Page 2]
+
+Nakajima                Expires September 8, 2015               [Page 2]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
 
-   [RFC4086]  Eastlake, D., Schiller, J., and S. Crocker, "Randomness
-              Requirements for Security", BCP 106, RFC 4086, June 2005.
+   normal: "normal"
 
-   [RFC4648]  Josefsson, S., "The Base16, Base32, and Base64 Data
-              Encodings", RFC 4648, October 2006.
+   important:
 
-4.2.  Informative References
+   emergency:
+
+4.  IANA Considerations
+
+   This document specifies the HTTP header field listed below, which has
+   been added to the "Permanent Message Header Field Names" registry
+   defined in [RFC3864].
+
+   Header field: Push-Catagory Applicable protocol: http Status:
+   standard Auther/Change controller: IETF (iesg@ietf.org) Internet
+   Engineering Task Force Specification document(s): this specification
+   Related information: None
+
+5.  References
+
+5.1.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119, March 1997.
+
+   [RFC3864]  Klyne, G., Nottingham, M., and J. Mogul, "Registration
+              Procedures for Message Header Fields", BCP 90, RFC 3864,
+              September 2004.
+
+5.2.  Informative References
 
    [I-D.thomson-webpush-http2]
               Thomson, M., "Generic Event Delivery Using HTTP Push",
               draft-thomson-webpush-http2-02 (work in progress),
               December 2014.
-
-   [RFC5389]  Rosenberg, J., Mahy, R., Matthews, P., and D. Wing,
-              "Session Traversal Utilities for NAT (STUN)", RFC 5389,
-              October 2008.
 
 Author's Address
 
@@ -147,22 +165,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Nakajima                Expires September 7, 2015               [Page 3]
+Nakajima                Expires September 8, 2015               [Page 3]

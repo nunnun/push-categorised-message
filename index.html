@@ -456,9 +456,10 @@ ul.toc a:first-child {
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction"/>
 <link href="#rfc.section.2" rel="Chapter" title="2 Terminology"/>
 <link href="#rfc.section.3" rel="Chapter" title="3 Categorized push subscribe"/>
-<link href="#rfc.references" rel="Chapter" title="4 References"/>
-<link href="#rfc.references.1" rel="Chapter" title="4.1 Normative References"/>
-<link href="#rfc.references.2" rel="Chapter" title="4.2 Informative References"/>
+<link href="#rfc.section.4" rel="Chapter" title="4 IANA Considerations"/>
+<link href="#rfc.references" rel="Chapter" title="5 References"/>
+<link href="#rfc.references.1" rel="Chapter" title="5.1 Normative References"/>
+<link href="#rfc.references.2" rel="Chapter" title="5.2 Informative References"/>
 <link href="#rfc.authors" rel="Chapter"/>
 
 
@@ -467,7 +468,7 @@ ul.toc a:first-child {
 
   <meta name="dct.creator" content="Nakajima, H." />
   <meta name="dct.identifier" content="urn:ietf:id:draft-nakajima-webpush-push-categorized-message-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2015-3-6" />
+  <meta name="dct.issued" scheme="ISO8601" content="2015-3-7" />
   <meta name="dct.abstract" content="The Web Push protocol provides a means of delivering the events to clients based on the registration made by the application.  This document describes extentions to that protocol that enables the categorized message delivery based on priority." />
   <meta name="description" content="The Web Push protocol provides a means of delivering the events to clients based on the registration made by the application.  This document describes extentions to that protocol that enables the categorized message delivery based on priority." />
 
@@ -488,10 +489,10 @@ ul.toc a:first-child {
 </tr>
 <tr>
   <td class="left">Intended status: Standards Track</td>
-  <td class="right">March 6, 2015</td>
+  <td class="right">March 7, 2015</td>
 </tr>
 <tr>
-  <td class="left">Expires: September 7, 2015</td>
+  <td class="left">Expires: September 8, 2015</td>
   <td class="right"></td>
 </tr>
 
@@ -506,14 +507,14 @@ ul.toc a:first-child {
   <a href="#rfc.abstract">Abstract</a>
 </h1>
 <p>The Web Push protocol provides a means of delivering the events to clients based on the registration made by the application.  This document describes extentions to that protocol that enables the categorized message delivery based on priority.</p>
-<p>This allows an application to request that a web push server deliver the emergency message to a registered client.</p>
+<p>This allows an application to request that a web push server deliver the prioritized message to a registered client.</p>
 <h1 id="rfc.status">
   <a href="#rfc.status">Status of This Memo</a>
 </h1>
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at http://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on September 7, 2015.</p>
+<p>This Internet-Draft will expire on September 8, 2015.</p>
 <h1 id="rfc.copyrightnotice">
   <a href="#rfc.copyrightnotice">Copyright Notice</a>
 </h1>
@@ -528,9 +529,10 @@ ul.toc a:first-child {
   	<li>1.   <a href="#rfc.section.1">Introduction</a></li>
 <li>2.   <a href="#rfc.section.2">Terminology</a></li>
 <li>3.   <a href="#rfc.section.3">Categorized push subscribe</a></li>
-<li>4.   <a href="#rfc.references">References</a></li>
-<ul><li>4.1.   <a href="#rfc.references.1">Normative References</a></li>
-<li>4.2.   <a href="#rfc.references.2">Informative References</a></li>
+<li>4.   <a href="#rfc.section.4">IANA Considerations</a></li>
+<li>5.   <a href="#rfc.references">References</a></li>
+<ul><li>5.1.   <a href="#rfc.references.1">Normative References</a></li>
+<li>5.2.   <a href="#rfc.references.2">Informative References</a></li>
 </ul><li><a href="#rfc.authors">Author's Address</a></li>
 
 
@@ -541,10 +543,19 @@ ul.toc a:first-child {
 <p id="rfc.section.1.p.2">A new header field is added to the Web Push push response message. This header field identifies a category that lets push server delivering message with priority. Application can use the category to send a push message with priority.</p>
 <h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#terminology" id="terminology">Terminology</a></h1>
 <p id="rfc.section.2.p.1">In cases where normative language needs to be emphasized, this document back on established shorthands for expressing interoperability requirements on implementations: the capitalized words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;SHOULD&#8221; and &#8220;MAY&#8221;.  The meaning of these is described in <a href="#RFC2119">[RFC2119]</a>.</p>
-<h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#categorized-push-subscribe" id="categorized-push-subscribe">Categorized push subscribe</a></h1>
-<p id="rfc.section.3.p.1">A new push &#8220;subscribe&#8221;</p>
-<h1 id="rfc.references"><a href="#rfc.references">4.</a> References</h1>
-<h1 id="rfc.references.1"><a href="#rfc.references.1">4.1.</a> Normative References</h1>
+<h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#category" id="category">Categorized push subscribe</a></h1>
+<p id="rfc.section.3.p.1">A new header field &#8220;Push-Category&#8221; is provided in subscribe request to indicate priority of new subscription.</p>
+<p id="rfc.section.3.p.2">POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1 Host: push.example.net Push-Category: Normal</p>
+<p id="rfc.section.3.p.3">The &#8220;Push-Category&#8221; HTTP header field is an OPTIONAL header field that, when used, indicates a priority of push subscription and its delivery.</p>
+<p id="rfc.section.3.p.4">The following categories are defined:</p>
+<p id="rfc.section.3.p.5">normal: &#8220;normal&#8221;</p>
+<p id="rfc.section.3.p.6">important:</p>
+<p id="rfc.section.3.p.7">emergency:</p>
+<h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a></h1>
+<p id="rfc.section.4.p.1">This document specifies the HTTP header field listed below, which has been added to the &#8220;Permanent Message Header Field Names&#8221; registry defined in <a href="#RFC3864">[RFC3864]</a>.</p>
+<p id="rfc.section.4.p.2">Header field: Push-Catagory Applicable protocol: http Status: standard Auther/Change controller: IETF (iesg@ietf.org) Internet Engineering Task Force Specification document(s): this specification Related information: None</p>
+<h1 id="rfc.references"><a href="#rfc.references">5.</a> References</h1>
+<h1 id="rfc.references.1"><a href="#rfc.references.1">5.1.</a> Normative References</h1>
 <table>
   <tbody>
     <tr>
@@ -555,25 +566,13 @@ ul.toc a:first-child {
     </tr>
     <tr>
       <td class="reference">
-        <b id="RFC3986">[RFC3986]</b>
+        <b id="RFC3864">[RFC3864]</b>
       </td>
-      <td class="top"><a href="mailto:timbl@w3.org" title="World Wide Web Consortium">Berners-Lee, T.</a>, <a href="mailto:fielding@gbiv.com" title="Day Software">Fielding, R.</a> and <a href="mailto:LMM@acm.org" title="Adobe Systems Incorporated">L. Masinter</a>, "<a href="http://tools.ietf.org/html/rfc3986">Uniform Resource Identifier (URI): Generic Syntax</a>", STD 66, RFC 3986, January 2005.</td>
-    </tr>
-    <tr>
-      <td class="reference">
-        <b id="RFC4086">[RFC4086]</b>
-      </td>
-      <td class="top"><a>Eastlake, D.</a>, <a>Schiller, J.</a> and <a>S. Crocker</a>, "<a href="http://tools.ietf.org/html/rfc4086">Randomness Requirements for Security</a>", BCP 106, RFC 4086, June 2005.</td>
-    </tr>
-    <tr>
-      <td class="reference">
-        <b id="RFC4648">[RFC4648]</b>
-      </td>
-      <td class="top"><a>Josefsson, S.</a>, "<a href="http://tools.ietf.org/html/rfc4648">The Base16, Base32, and Base64 Data Encodings</a>", RFC 4648, October 2006.</td>
+      <td class="top"><a>Klyne, G.</a>, <a>Nottingham, M.</a> and <a>J. Mogul</a>, "<a href="http://tools.ietf.org/html/rfc3864">Registration Procedures for Message Header Fields</a>", BCP 90, RFC 3864, September 2004.</td>
     </tr>
   </tbody>
 </table>
-<h1 id="rfc.references.2"><a href="#rfc.references.2">4.2.</a> Informative References</h1>
+<h1 id="rfc.references.2"><a href="#rfc.references.2">5.2.</a> Informative References</h1>
 <table>
   <tbody>
     <tr>
@@ -581,12 +580,6 @@ ul.toc a:first-child {
         <b id="I-D.thomson-webpush-http2">[I-D.thomson-webpush-http2]</b>
       </td>
       <td class="top"><a>Thomson, M.</a>, "<a href="http://tools.ietf.org/html/draft-thomson-webpush-http2-02">Generic Event Delivery Using HTTP Push</a>", Internet-Draft draft-thomson-webpush-http2-02, December 2014.</td>
-    </tr>
-    <tr>
-      <td class="reference">
-        <b id="RFC5389">[RFC5389]</b>
-      </td>
-      <td class="top"><a>Rosenberg, J.</a>, <a>Mahy, R.</a>, <a>Matthews, P.</a> and <a>D. Wing</a>, "<a href="http://tools.ietf.org/html/rfc5389">Session Traversal Utilities for NAT (STUN)</a>", RFC 5389, October 2008.</td>
     </tr>
   </tbody>
 </table>
