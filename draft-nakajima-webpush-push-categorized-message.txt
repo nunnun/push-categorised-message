@@ -142,9 +142,13 @@ Internet-Draft        Web Push Categorized Message            March 2015
    been added to the "Permanent Message Header Field Names" registry
    defined in [RFC3864].
 
-   Header field: Push-Catagory Applicable protocol: http Status:
-   standard Auther/Change controller: IETF (iesg@ietf.org) Internet
-   Engineering Task Force Specification document(s): this specification
+   Header field: Push-Catagory
+   Applicable protocol: http
+   Status: standard
+   Auther/Change controller:
+     IETF (iesg@ietf.org)
+     Internet Engineering Task Force
+   Specification document(s): this specification
    Related information: None
 
 6.  References
@@ -157,10 +161,6 @@ Internet-Draft        Web Push Categorized Message            March 2015
    [RFC3864]  Klyne, G., Nottingham, M., and J. Mogul, "Registration
               Procedures for Message Header Fields", BCP 90, RFC 3864,
               September 2004.
-
-
-
-
 
 
 
