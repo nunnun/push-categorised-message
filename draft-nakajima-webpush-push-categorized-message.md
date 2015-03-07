@@ -53,10 +53,11 @@ The meaning of these is described in {{RFC2119}}.
 # Categorized push subscription {#category}
 
 A new header field "Push-Category" is provided in subscribe request to indicate priority of new subscription.
-
+~~~~~~~~~~
 POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1
 Host: push.example.net
 Push-Category: Normal
+~~~~~~~~~~
 
 The "Push-Category" HTTP header field is an OPTIONAL header field that, when used, indicates a priority of push subscription and its delivery.
 
