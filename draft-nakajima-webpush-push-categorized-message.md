@@ -50,6 +50,15 @@ established shorthands for expressing interoperability requirements on
 implementations: the capitalized words "MUST", "MUST NOT", "SHOULD" and "MAY".
 The meaning of these is described in {{RFC2119}}.
 
+# Problem Statement {#problem}
+TODO: show why this draft is needed.
+
+## Emergency Notification on Mobile device
+3GPP examples
+
+## Important Notification delivery
+Application Important notification delivery e.g. rtcweb incoming call
+
 # Categorized push subscription {#category}
 
 A new header field "Push-Category" is provided in subscribe request to indicate priority of new subscription.
