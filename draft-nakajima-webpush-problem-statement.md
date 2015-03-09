@@ -28,7 +28,9 @@ informative:
     title: "Web Push API"
     author:
       name: "Bryan Sullivan"
+    author:
       name: "Eduardo Fullea"
+    author:
       name: "Michaël van Ouwerkerk"
   TS22268:
     title: "Public Warning System (PWS) requirements"
@@ -38,6 +40,13 @@ informative:
   802.11u:
     title: "IEEE Standard for Information Technology-Telecommunications and information exchange between systems-Local and Metropolitan networks-specific requirements-Part II: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) specifications: Amendment 9: Interworking with External Networks"
     date: 2011-02-25
+  CAP:
+    title: "Common Alerting Protocol v1.2"
+    date: 2010-07
+    author:
+      name: "Elysa Jones"
+    author:
+      name: "Jacob Westfall"
 
 --- abstract
 
@@ -61,7 +70,7 @@ In the cellular network, several emergency alerting mechanisms have been propose
 - Able to broadcast Warning notifications based on geographical information.
 - Provides reliable, secure delivery of Warning notification over 3GPP system.
 
-Addition to PWS in the WiFi network, IEEE 802.11u {{802.11u}} has an emergency support which 
+Addition to PWS in the WiFi network, IEEE 802.11u {{802.11u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. 
 
 At IETF, Atoca WG has worked for 
 
