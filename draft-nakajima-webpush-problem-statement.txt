@@ -71,12 +71,12 @@ Table of Contents
      3.1.  Issues on existing emergency alerting system  . . . . . .   3
      3.2.  Use case of Web Push Emergency Alerting Notification  . .   3
      3.3.  Non-emergency, Important notification . . . . . . . . . .   3
-   4.  Security Consideration  . . . . . . . . . . . . . . . . . . .   3
-   5.  IANA Consideration  . . . . . . . . . . . . . . . . . . . . .   3
+   4.  Security Consideration  . . . . . . . . . . . . . . . . . . .   4
+   5.  IANA Consideration  . . . . . . . . . . . . . . . . . . . . .   4
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
      6.2.  Informative References  . . . . . . . . . . . . . . . . .   4
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
 
@@ -142,22 +142,22 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 3.2.  Use case of Web Push Emergency Alerting Notification
 
-   o  Web-based Signage
+   Web-based Signage Digital signage has widely deployed among the
+   unverse.  Signages located at public area such as train station or
+   street play a significant role in natural disaster or accident by
+   providing the evacuation alert or correct informations.  Recent few
+   years W3C worked on Web-based signage which has Web browser is
+   embedded, allowing to display or play Web content.  Disaster use case
+   is proposed in W3C Web-based Signage Scenarios and Use Cases
+   [SignageUseCase].
 
    o  OTT emergency alerting system (local goverment or authorities)
 
 3.3.  Non-emergency, Important notification
 
-   o  Incoming call Non-emergency but important notification is required
-      to
+   o  Incoming call
 
-4.  Security Consideration
-
-   TBD
-
-5.  IANA Consideration
-
-   TBD
+   Non-emergency but important notification is required to
 
 
 
@@ -169,6 +169,14 @@ Nakajima               Expires September 10, 2015               [Page 3]
 
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
+
+4.  Security Consideration
+
+   TBD
+
+5.  IANA Consideration
+
+   TBD
 
 6.  References
 
@@ -202,9 +210,21 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
    [PushAPI]  W3C, "Web Push API", February 2015,
               <https://w3c.github.io/push-api/>.
 
+   [SignageUseCase]
+              Hatano, F., "Web-based Signage Scenarios and Use Cases",
+              July 2012, <http://www.w3.org/community/websignage/wiki/
+              Web-based_Signage_Scenarios_and_Use_Cases>.
+
    [_3GPP.22.268]
               3GPP, "Public Warning System (PWS) requirements", 3GPP TS
               22.268 10.4.0, December 2012.
+
+
+
+Nakajima               Expires September 10, 2015               [Page 4]
+
+Internet-DrafProblem Statement and Requirements for Web Push  March 2015
+
 
 Author's Address
 
@@ -221,4 +241,40 @@ Author's Address
 
 
 
-Nakajima               Expires September 10, 2015               [Page 4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 5]
