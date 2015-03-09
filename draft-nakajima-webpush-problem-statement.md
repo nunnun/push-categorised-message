@@ -18,7 +18,6 @@ author:
 
 normative:
   RFC2119:
-  RFC3864:
 
 informative:
   I-D.thomson-webpush-http2:
@@ -27,9 +26,9 @@ informative:
   API:
     target: "https://w3c.github.io/push-api/"
     title: "Web Push API"
-  TS22168:
-    title: "Earthquake and Tsunami Warning System (ETWS) requirements"
-    date: 2008-06
+  TS22268:
+    title: "Public Warning System (PWS) requirements"
+    date: 2014-09
     author:
       organization: "3GPP"
 
@@ -48,7 +47,15 @@ The delivery of real-time events such as incoming calls or messages is an essent
 The Web Push {{I-D.thomson-webpush-http2}} protocol has been proposed to enable delierying the events required by W3C Web Push API {{API}}.
 
 Also, emergency alerting is an apparently important feature of telecommunication network such as cellular networks, allowing the goverments or authorities to send a warnings of natural disaster or accident. 
-In the cellular network, Earthquake and Tsunami Warning System {{TS22168}} has been developed and deployed 
+In the cellular network, several emergency alerting mechanisms have been proposed and merged into Public Warning System(PWS) {{TS22268}}. PWS provides several functions for example:
+
+- Able to broadcast Warning notifications to multiple devices simultaneously.
+- Able to broadcast Warning notifications based on geographical information.
+- Provides reliable, secure delivery of Warning notification over 3GPP system.
+
+Addition to PWS, 
+
+This document will describe various use cases and requirements of emergency notification system using Web Push.
 
 # Terminology
 
@@ -71,6 +78,7 @@ TODO: show why this draft is needed.
 - ETWS case
 - 802.11u case
 - Yurekuru case
+- Web-based Signage case
 
 - CAP protocol
 - Atoca WG
