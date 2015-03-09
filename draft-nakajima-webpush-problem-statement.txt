@@ -73,7 +73,7 @@ Table of Contents
    4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
      4.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
      4.2.  Informative References  . . . . . . . . . . . . . . . . .   4
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
 
@@ -85,9 +85,11 @@ Table of Contents
    Also, emergency alerting is an apparently important feature of
    telecommunication network such as cellular networks, allowing the
    goverments or authorities to send a warnings of natural disaster or
-   accident.  In the cellular network, several emergency alerting
-   mechanisms have been proposed and merged into Public Warning
-   System(PWS) [TS22268].  PWS provides several functions for example:
+   accident.
+
+   In the cellular network, several emergency alerting mechanisms have
+   been proposed and merged into Public Warning System(PWS)
+   [_3GPP.22.268].  PWS provides several functions for example:
 
    o  Able to broadcast Warning notifications to multiple devices
       simultaneously.
@@ -98,12 +100,10 @@ Table of Contents
    o  Provides reliable, secure delivery of Warning notification over
       3GPP system.
 
-   Addition to PWS,
+   Addition to PWS in the WiFi network, IEEE 802.11u [IEEE80211u] has an
+   emergency support which uses Common Alerting Protocol (CAP) [CAP].
 
-   This document will describe various use cases and requirements of
-   emergency notification system using Web Push.
-
-
+   At IETF, Atoca WG has worked for
 
 
 
@@ -113,6 +113,9 @@ Nakajima               Expires September 10, 2015               [Page 2]
 
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
+
+   This document will describe various use cases and requirements of
+   emergency notification system using Web Push.
 
 2.  Terminology
 
@@ -162,9 +165,6 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 
 
-
-
-
 Nakajima               Expires September 10, 2015               [Page 3]
 
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
@@ -185,6 +185,8 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
    [API]      "Web Push API", n.d., <https://w3c.github.io/push-api/>.
 
+   [CAP]      "Common Alerting Protocol v1.2", July 2010.
+
    [I-D.ietf-httpbis-http2]
               Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
               Protocol version 2", draft-ietf-httpbis-http2-17 (work in
@@ -200,8 +202,29 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
               draft-thomson-webpush-http2-02 (work in progress),
               December 2014.
 
-   [TS22268]  3GPP, "Public Warning System (PWS) requirements",
-              September 2014.
+   [IEEE80211u]
+              IEEE, "IEEE Standard for Information Technology-
+              Telecommunications and information exchange between
+              systems-Local and Metropolitan networks-specific
+              requirements-Part II: Wireless LAN Medium Access Control
+              (MAC) and Physical Layer (PHY) specifications: Amendment
+              9: Interworking with External Networks", February 2011.
+
+   [_3GPP.22.268]
+              3GPP, "Public Warning System (PWS) requirements", 3GPP TS
+              22.268 10.4.0, December 2012.
+
+
+
+
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 4]
+
+Internet-DrafProblem Statement and Requirements for Web Push  March 2015
+
 
 Author's Address
 
@@ -221,4 +244,37 @@ Author's Address
 
 
 
-Nakajima               Expires September 10, 2015               [Page 4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 5]
