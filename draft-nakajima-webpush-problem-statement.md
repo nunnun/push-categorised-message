@@ -26,10 +26,13 @@ informative:
     target: "https://w3c.github.io/push-api/"
     title: "Web Push API"
     author:
+      ins: "B. Sullivan"
       name: "Bryan Sullivan"
     author:
+      ins: "E. Fullea"
       name: "Eduardo Fullea"
     author:
+      ins: "M. Ouwerkerk"
       name: "Michaël van Ouwerkerk"
   3GPP.22.268:
   CAP:
@@ -70,7 +73,7 @@ In the cellular network, several emergency alerting mechanisms have been propose
 
 Addition to PWS, some work has been made to distribute the emergency alerting notification on different network. In the WiFi network, IEEE 802.11u {{IEEE80211u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. Also, Atoca WG has worked for defining the secure alerting format to broadcast CAP-based alert over IP network.
 
-Those previous contribuions have been made to improve  
+Those previous contribuions have been made to develop the method to distribute an emergency alerting notification. 
 
 This document will describe various use cases and requirements of emergency notification system using Web Push.
 
@@ -93,9 +96,10 @@ The meaning of these is described in {{RFC2119}}.
 - Web-based Signage
 - OTT emergency alerting system (local goverment or authorities)
 
-## Non-emergency, Important notifivation
+## Non-emergency, Important notification
 
 - Incoming call
+Non-emergency but important notification is required to 
 
 # Security Consideration
 TBD
