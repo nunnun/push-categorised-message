@@ -24,6 +24,14 @@ informative:
   I-D.thomson-webpush-http2:
   I-D.ietf-httpbis-http2:
   I-D.thomson-webpush-aggregate:
+  API:
+    target: https://w3c.github.io/push-api/
+    title: "Web Push API"
+  TS22168:
+    title: "Earthquake and Tsunami Warning System (ETWS) requirements"
+    date: 2008-06
+    author:
+      name: "3GPP"
 
 --- abstract
 
