@@ -212,12 +212,12 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
    [SignageUseCase]
               Hatano, F., "Web-based Signage Scenarios and Use Cases",
-              July 2012, <http://www.w3.org/community/websignage/wiki/
-              Web-based_Signage_Scenarios_and_Use_Cases>.
+              January 2013,
+              <http://www.w3.org/community/websignage/wiki/
+              Web-based_Signage_Use_cases_and_Requirements>.
 
-   [_3GPP.22.268]
-              3GPP, "Public Warning System (PWS) requirements", 3GPP TS
-              22.268 10.4.0, December 2012.
+
+
 
 
 
@@ -226,16 +226,16 @@ Nakajima               Expires September 10, 2015               [Page 4]
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 
+   [_3GPP.22.268]
+              3GPP, "Public Warning System (PWS) requirements", 3GPP TS
+              22.268 10.4.0, December 2012.
+
 Author's Address
 
    Hirotaka Nakajima
    Keio University
 
    Email: hiro@awa.sfc.keio.ac.jp
-
-
-
-
 
 
 
