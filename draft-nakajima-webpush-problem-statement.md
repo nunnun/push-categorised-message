@@ -106,7 +106,7 @@ Digital signage has widely deployed among the unverse. Signages located at publi
 Non-emergency but important notification is required to 
 
 # Security Consideration
-TBD
+Discovery of Push Server and application is out of scope in this document. However, discovery of reliable Push Server and application is definitely important. Also, it is important for Web Push Emergency Alerting notification to have a mechanism to avoid the abuse of system.
 
 # IANA Consideration
 TBD
