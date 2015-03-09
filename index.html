@@ -458,7 +458,7 @@ ul.toc a:first-child {
 <link href="#rfc.section.3" rel="Chapter" title="3 Problem Statement"/>
 <link href="#rfc.section.3.1" rel="Chapter" title="3.1 Issues on existing emergency alerting system"/>
 <link href="#rfc.section.3.2" rel="Chapter" title="3.2 Use case of Web Push Emergency Alerting Notification"/>
-<link href="#rfc.section.3.3" rel="Chapter" title="3.3 Non-emergency, Important notifivation"/>
+<link href="#rfc.section.3.3" rel="Chapter" title="3.3 Non-emergency, Important notification"/>
 <link href="#rfc.section.4" rel="Chapter" title="4 Security Consideration"/>
 <link href="#rfc.section.5" rel="Chapter" title="5 IANA Consideration"/>
 <link href="#rfc.references" rel="Chapter" title="6 References"/>
@@ -535,7 +535,7 @@ ul.toc a:first-child {
 <li>3.   <a href="#rfc.section.3">Problem Statement</a></li>
 <ul><li>3.1.   <a href="#rfc.section.3.1">Issues on existing emergency alerting system</a></li>
 <li>3.2.   <a href="#rfc.section.3.2">Use case of Web Push Emergency Alerting Notification</a></li>
-<li>3.3.   <a href="#rfc.section.3.3">Non-emergency, Important notifivation</a></li>
+<li>3.3.   <a href="#rfc.section.3.3">Non-emergency, Important notification</a></li>
 </ul><li>4.   <a href="#rfc.section.4">Security Consideration</a></li>
 <li>5.   <a href="#rfc.section.5">IANA Consideration</a></li>
 <li>6.   <a href="#rfc.references">References</a></li>
@@ -558,7 +558,7 @@ ul.toc a:first-child {
   <li>Provides reliable, secure delivery of Warning notification over 3GPP system.</li>
 </ul>
 <p id="rfc.section.1.p.5">Addition to PWS, some work has been made to distribute the emergency alerting notification on different network. In the WiFi network, IEEE 802.11u <a href="#IEEE80211u">[IEEE80211u]</a> has an emergency support which uses Common Alerting Protocol (CAP) <a href="#CAP">[CAP]</a>. Also, Atoca WG has worked for defining the secure alerting format to broadcast CAP-based alert over IP network.</p>
-<p id="rfc.section.1.p.6">Those previous contribuions have been made to improve</p>
+<p id="rfc.section.1.p.6">Those previous contribuions have been made to develop the method to distribute an emergency alerting notification.</p>
 <p id="rfc.section.1.p.7">This document will describe various use cases and requirements of emergency notification system using Web Push.</p>
 <h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#terminology" id="terminology">Terminology</a></h1>
 <p id="rfc.section.2.p.1">In cases where normative language needs to be emphasized, this document back on established shorthands for expressing interoperability requirements on implementations: the capitalized words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;SHOULD&#8221; and &#8220;MAY&#8221;.  The meaning of these is described in <a href="#RFC2119">[RFC2119]</a>.</p>
@@ -577,11 +577,11 @@ ul.toc a:first-child {
   <li>Web-based Signage</li>
   <li>OTT emergency alerting system (local goverment or authorities)</li>
 </ul>
-<h1 id="rfc.section.3.3"><a href="#rfc.section.3.3">3.3.</a> <a href="#non-emergency-important-notifivation" id="non-emergency-important-notifivation">Non-emergency, Important notifivation</a></h1>
+<h1 id="rfc.section.3.3"><a href="#rfc.section.3.3">3.3.</a> <a href="#non-emergency-important-notification" id="non-emergency-important-notification">Non-emergency, Important notification</a></h1>
 <p/>
 
 <ul>
-  <li>Incoming call</li>
+  <li>Incoming call Non-emergency but important notification is required to</li>
 </ul>
 <h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#security-consideration" id="security-consideration">Security Consideration</a></h1>
 <p id="rfc.section.4.p.1">TBD</p>
@@ -607,7 +607,7 @@ ul.toc a:first-child {
       <td class="reference">
         <b id="I-D.ietf-httpbis-http2">[I-D.ietf-httpbis-http2]</b>
       </td>
-      <td class="top"><a>Belshe, M.</a>, <a>Peon, R.</a> and <a>M. Thomson</a>, <a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-17">Hypertext Transfer Protocol version 2</a>", Internet-Draft draft-ietf-httpbis-http2-17, February 2015.</td>
+      <td class="top"><a>Belshe, M.</a>, <a>Peon, R.</a> and <a>M. Thomson</a>, "<a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-17">Hypertext Transfer Protocol version 2</a>", Internet-Draft draft-ietf-httpbis-http2-17, February 2015.</td>
     </tr>
     <tr>
       <td class="reference">
@@ -621,7 +621,12 @@ ul.toc a:first-child {
       </td>
       <td class="top"><a>IEEE</a>, "<a>IEEE Standard for Information Technology-Telecommunications and information exchange between systems-Local and Metropolitan networks-specific requirements-Part II: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) specifications: Amendment 9: Interworking with External Networks</a>", February 2011.</td>
     </tr>
-    <tr><td class="reference"><b id="PushAPI">[PushAPI]</b></td><td class="top"><a href="https://w3c.github.io/push-api/">Web Push API</a>", n.d..</td>, "</tr>
+    <tr>
+      <td class="reference">
+        <b id="PushAPI">[PushAPI]</b>
+      </td>
+      <td class="top"><a>Ouwerkerk, M.</a>, "<a href="https://w3c.github.io/push-api/">Web Push API</a>", n.d..</td>
+    </tr>
     <tr>
       <td class="reference">
         <b id="_3GPP.22.268">[_3GPP.22.268]</b>
