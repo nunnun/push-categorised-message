@@ -22,7 +22,6 @@ normative:
 informative:
   I-D.thomson-webpush-http2:
   I-D.ietf-httpbis-http2:
-  I-D.thomson-webpush-aggregate:
   API:
     target: "https://w3c.github.io/push-api/"
     title: "Web Push API"
@@ -56,7 +55,7 @@ This document outlines various existing emergency alert notification system in o
 
 --- middle
 
-# Introduction        {#intro}
+# Introduction {#intro}
 
 The delivery of real-time events such as incoming calls or messages is an essential feature of mobile application and its platform. 
 The Web Push {{I-D.thomson-webpush-http2}} protocol has been proposed to enable delierying the events required by W3C Web Push API {{API}}.
@@ -69,9 +68,9 @@ In the cellular network, several emergency alerting mechanisms have been propose
 - Able to broadcast Warning notifications based on geographical information.
 - Provides reliable, secure delivery of Warning notification over 3GPP system.
 
-Addition to PWS in the WiFi network, IEEE 802.11u {{IEEE80211u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. 
+Addition to PWS, some work has been made to distribute the emergency alerting notification on different network. In the WiFi network, IEEE 802.11u {{IEEE80211u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. Also, Atoca WG has worked for defining the secure alerting format to broadcast CAP-based alert over IP network.
 
-At IETF, Atoca WG has worked for 
+Those previous contribuions have been made to improve  
 
 This document will describe various use cases and requirements of emergency notification system using Web Push.
 
@@ -83,25 +82,24 @@ implementations: the capitalized words "MUST", "MUST NOT", "SHOULD" and "MAY".
 The meaning of these is described in {{RFC2119}}.
 
 # Problem Statement {#problem}
-TODO: show why this draft is needed.
 
-- 既存緊急通報のメカニズムは限定的な環境でしか動作しない
-- 標準化されたアプリケーション通知のメカニズムが存在しない
-- 独自の実装の例を挙げる
-- メッセージフォーマットの事例を書く
-- 緊急じゃなくても重要な通知を行う
+## Issues on existing emergency alerting system
 
-## Emergency Notification
+- Rely on specific underlaying technology (e.g. 3GPP, 802.11u)
+- Geo-based notification
 
-- ETWS case
-- 802.11u case
-- Yurekuru case
-- Web-based Signage case
+## Use case of Web Push Emergency Alerting Notification
 
-- CAP protocol
-- Atoca WG
+- Web-based Signage
+- OTT emergency alerting system (local goverment or authorities)
 
-## Important Notification delivery
-Application Important notification delivery e.g. rtcweb incoming call
+## Non-emergency, Important notifivation
 
+- Incoming call
+
+# Security Consideration
+TBD
+
+# IANA Consideration
+TBD
 
