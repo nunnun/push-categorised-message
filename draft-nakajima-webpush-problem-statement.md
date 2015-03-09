@@ -66,16 +66,6 @@ The Web Push {{I-D.thomson-webpush-http2}} protocol has been proposed to enable 
 
 Also, emergency alerting is an apparently important feature of telecommunication network such as cellular networks, allowing the goverments or authorities to send a warnings of natural disaster or accident. 
 
-In the cellular network, several emergency alerting mechanisms have been proposed and merged into Public Warning System(PWS) {{3GPP.22.268}}. PWS provides several functions for example:
-
-- Able to broadcast Warning notifications to multiple devices simultaneously.
-- Able to broadcast Warning notifications based on geographical information.
-- Provides reliable, secure delivery of Warning notification over 3GPP system.
-
-Addition to PWS, some work has been made to distribute the emergency alerting notification on different network. In the WiFi network, IEEE 802.11u {{IEEE80211u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. Also, Atoca WG has worked for defining the secure alerting format to broadcast CAP-based alert over IP network.
-
-Those previous contribuions have been made to develop the method to distribute an emergency alerting notification. 
-
 This document will describe various use cases and requirements of emergency notification system using Web Push.
 
 # Terminology
@@ -89,8 +79,17 @@ The meaning of these is described in {{RFC2119}}.
 
 ## Issues on existing emergency alerting system
 
-- Rely on specific underlaying technology (e.g. 3GPP, 802.11u)
-- Geo-based notification
+This section describes the survey and issues of existing emergency alerting system.
+
+In the cellular network, several emergency alerting mechanisms have been proposed and merged into Public Warning System(PWS) {{3GPP.22.268}}. PWS provides several functions for example:
+
+- Able to broadcast Warning notifications to multiple devices simultaneously.
+- Able to broadcast Warning notifications based on geographical information.
+- Provides reliable, secure delivery of Warning notification over 3GPP system.
+
+Addition to PWS, some work has been made to distribute the emergency alerting notification on different network. In the WiFi network, IEEE 802.11u {{IEEE80211u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. Also, Atoca WG has worked for defining the secure alerting format to broadcast CAP-based alert over IP network.
+
+Those previous contribuions have been made to develop the method to distribute an emergency alerting notification. 
 
 ## Use case of Web Push Emergency Alerting Notification
 
@@ -98,11 +97,15 @@ There are two potential use case of Web Push Emergency Alerting notification.
 
 The first use case is a Web-based Signage. Digital signage has widely deployed among the unverse. Signages located at public area such as train station or street play a significant role in natural disaster or accident by providing the evacuation alert or correct informations. Recent few years W3C worked on Web-based signage which has Web browser is embedded, allowing to display or play Web content. Disaster use case is proposed in W3C Web-based Signage Scenarios and Use Cases {{SignageUseCase}}. 
 
-The second use case is an over-the-top emergency alerting system operated by a local authorities or a government. An emgergency alerting of a major natural disaster such as an earthquake or a tsunami could be distributed by existing emergency alerting system (e.g. PWS). However, 
+The second use case is an over-the-top emergency alerting system operated by a local authorities or a government. 
+An emgergency alerting of an major natural disaster such as an earthquake or a tsunami could be distributed by existing emergency alerting system (e.g. PWS). 
+However, distributing an emergency alerting of an minor natual disaster such as heavy rain alert using existing method is too complicated compared to the importance of the information or alert.
+Web Push emergency alerting notification can provide more specific alert or information requested by the mobile or desktop application. For example:
+
+- Raining alert based on the location
+- Transit alert such as accident information or suspention
 
 ## Non-emergency, Important notification
-
-- Incoming call
 
 Non-emergency but important notification is required to 
 
