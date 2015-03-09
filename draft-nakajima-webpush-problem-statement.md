@@ -154,7 +154,9 @@ or WiFi network. For example:
 
 ## Non-emergency, Important notification
 
-Non-emergency but important notification is required to 
+Non-emergency but important notification is required to real-time applications.
+Real-time application such as VoIP or telecommunication application, need to
+deliver the notification faster than other notification. 
 
 # Security Consideration
 Discovery of Push Server and application is out of scope in this document.
