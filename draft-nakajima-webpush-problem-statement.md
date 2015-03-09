@@ -32,14 +32,7 @@ informative:
       name: "Eduardo Fullea"
     author:
       name: "Michaël van Ouwerkerk"
-  TS22268:
-    title: "Public Warning System (PWS) requirements"
-    date: 2014-09
-    author:
-      organization: "3GPP"
-  802.11u:
-    title: "IEEE Standard for Information Technology-Telecommunications and information exchange between systems-Local and Metropolitan networks-specific requirements-Part II: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) specifications: Amendment 9: Interworking with External Networks"
-    date: 2011-02-25
+  3GPP.22.268:
   CAP:
     title: "Common Alerting Protocol v1.2"
     date: 2010-07
@@ -47,6 +40,12 @@ informative:
       name: "Elysa Jones"
     author:
       name: "Jacob Westfall"
+  IEEE80211u:
+    title: "IEEE Standard for Information Technology-Telecommunications and information exchange between systems-Local and Metropolitan networks-specific requirements-Part II: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) specifications: Amendment 9: Interworking with External Networks"
+    date: 2011-02-25
+    author:
+      organization: "IEEE"
+
 
 --- abstract
 
@@ -64,13 +63,13 @@ The Web Push {{I-D.thomson-webpush-http2}} protocol has been proposed to enable 
 
 Also, emergency alerting is an apparently important feature of telecommunication network such as cellular networks, allowing the goverments or authorities to send a warnings of natural disaster or accident. 
 
-In the cellular network, several emergency alerting mechanisms have been proposed and merged into Public Warning System(PWS) {{TS22268}}. PWS provides several functions for example:
+In the cellular network, several emergency alerting mechanisms have been proposed and merged into Public Warning System(PWS) {{3GPP.22.268}}. PWS provides several functions for example:
 
 - Able to broadcast Warning notifications to multiple devices simultaneously.
 - Able to broadcast Warning notifications based on geographical information.
 - Provides reliable, secure delivery of Warning notification over 3GPP system.
 
-Addition to PWS in the WiFi network, IEEE 802.11u {{802.11u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. 
+Addition to PWS in the WiFi network, IEEE 802.11u {{IEEE80211u}} has an emergency support which uses Common Alerting Protocol (CAP) {{CAP}}. 
 
 At IETF, Atoca WG has worked for 
 
