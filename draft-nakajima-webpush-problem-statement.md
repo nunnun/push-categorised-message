@@ -46,8 +46,8 @@ informative:
     author: 
       name: "Futomi Hatano"
       ins: "F. Hatano"
-    target: http://www.w3.org/community/websignage/wiki/Web-based_Signage_Scenarios_and_Use_Cases
-    date: 2012-07
+    target: "http://www.w3.org/community/websignage/wiki/Web-based_Signage_Use_cases_and_Requirements"
+    date: 2013-01
 
 
 --- abstract
