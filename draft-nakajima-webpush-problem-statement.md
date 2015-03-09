@@ -25,7 +25,7 @@ informative:
   I-D.ietf-httpbis-http2:
   I-D.thomson-webpush-aggregate:
   API:
-    target: https://w3c.github.io/push-api/
+    target: "https://w3c.github.io/push-api/"
     title: "Web Push API"
   TS22168:
     title: "Earthquake and Tsunami Warning System (ETWS) requirements"
@@ -78,88 +78,4 @@ TODO: show why this draft is needed.
 ## Important Notification delivery
 Application Important notification delivery e.g. rtcweb incoming call
 
-# Categorized push subscription {#category}
-
-A new header field "Push-Category" is provided in subscribe request to indicate priority of new subscription.
-
-~~~~~~~~~~
-POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1
-Host: push.example.net
-Push-Category: Normal
-~~~~~~~~~~
-{: #figxmpstore title="Example of push subscribe request with Push-Category header"}
-
-The "Push-Category" HTTP header field is an OPTIONAL header field that, when used, indicates a priority of push subscription and its delivery.
-
-The following categories are defined:
-
-normal: "normal" category indicates that push subscription 
-
-important: "important" category indicates that push channel MUST be delivered prior to "normal" push channel. Application MUST send a push message with stream which has a higher weight compared to Default stream priorities defined at {{I-D.ietf-httpbis-http2}}.
-
-~~~~~~~~~~
-    +-------+           +--------------+       +-------------+
-    |  UA   |           | Push Service |       | Application |
-    +-------+           +--------------+       +-------------+
-        |                      |                      |
-        |      Register        |                      |
-        |--------------------->|                      |
-        |       Monitor        |                      |
-        |<====================>|                      |
-        |      Subscribe       |                      |
-        |--------------------->|                      |
-        |           Provide Subscription              |
-        |-------------------------------------------->|
-        |                      |                      |
-        :                      :                      :
-        |                      |     Push Message     |
-        |                      | with PRIORITY header |
-        |    Push Message      |<---------------------|
-        |<---------------------|                      |
-        |                      |                      |
-~~~~~~~~~~
-
-emergency: "emergency" category indicates that push channel MUST be delivered prior to any other categorized or uncategorized push channel. User Agent MUST send a aggregated channel creation request {{I-D.thomson-webpush-aggregate}}. Application MUST send a push message with stream which has a highest weight compared to other stream on the connection.
-
-~~~~~~~~~~
-    +-------+           +--------------+       +-------------+
-    |  UA   |           | Push Service |       | Application |
-    +-------+           +--------------+       +-------------+
-        |                      |                      |
-        |      Register        |                      |
-        |--------------------->|                      |
-        |       Monitor        |                      |
-        |<====================>|                      |
-        |      Subscribe       |                      |
-        | (Aggregated Channel) |                      |
-        |--------------------->|                      |
-        |           Provide Subscription              |
-        |-------------------------------------------->|
-        |                      |                      |
-        :                      :                      :
-        |                      |     Push Message     |
-        |                      | with PRIORITY header |
-        |    Push Message      |<---------------------|
-        |<---------------------|                      |
-        |                      |                      |
-~~~~~~~~~~
-
-# Security Considerations
-
-# IANA Considerations
-
-This document specifies the HTTP header field listed below, which has 
-been added to the "Permanent Message Header Field Names" registry 
-defined in {{RFC3864}}.
-
-~~~~~~~~~~
-Header field: Push-Catagory
-Applicable protocol: http
-Status: standard
-Auther/Change controller:
-  IETF (iesg@ietf.org)
-  Internet Engineering Task Force
-Specification document(s): this specification
-Related information: None
-~~~~~~~~~~
 
