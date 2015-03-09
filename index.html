@@ -460,7 +460,7 @@ ul.toc a:first-child {
 <link href="#rfc.section.3.2" rel="Chapter" title="3.2 Use case of Web Push Emergency Alerting Notification"/>
 <link href="#rfc.section.3.3" rel="Chapter" title="3.3 Non-emergency, Important notification"/>
 <link href="#rfc.section.4" rel="Chapter" title="4 Security Consideration"/>
-<link href="#rfc.section.5" rel="Chapter" title="5 IANA Consideration TBD"/>
+<link href="#rfc.section.5" rel="Chapter" title="5 IANA Consideration"/>
 <link href="#rfc.references" rel="Chapter" title="6 References"/>
 <link href="#rfc.references.1" rel="Chapter" title="6.1 Normative References"/>
 <link href="#rfc.references.2" rel="Chapter" title="6.2 Informative References"/>
@@ -537,7 +537,7 @@ ul.toc a:first-child {
 <li>3.2.   <a href="#rfc.section.3.2">Use case of Web Push Emergency Alerting Notification</a></li>
 <li>3.3.   <a href="#rfc.section.3.3">Non-emergency, Important notification</a></li>
 </ul><li>4.   <a href="#rfc.section.4">Security Consideration</a></li>
-<li>5.   <a href="#rfc.section.5">IANA Consideration TBD</a></li>
+<li>5.   <a href="#rfc.section.5">IANA Consideration</a></li>
 <li>6.   <a href="#rfc.references">References</a></li>
 <ul><li>6.1.   <a href="#rfc.references.1">Normative References</a></li>
 <li>6.2.   <a href="#rfc.references.2">Informative References</a></li>
@@ -565,11 +565,11 @@ ul.toc a:first-child {
 </ul>
 <p id="rfc.section.3.1.p.4">Addition to PWS, some work has been made to distribute the emergency alerting notification on different network. In the WiFi network, IEEE 802.11u <a href="#IEEE80211u">[IEEE80211u]</a> has an emergency support which uses Common Alerting Protocol (CAP) <a href="#CAP">[CAP]</a>. Also, Atoca WG has worked for defining the secure alerting format to broadcast CAP-based alert over IP network.</p>
 <p id="rfc.section.3.1.p.5">Those previous contributions have been made to develop the method to distribute an emergency alerting notification.  However, those systems require a specific access network such as 3GPP or WiFi. There is an issue that desktop device or device not equipped with 3GPP or WiFi is not able to receive an emergency alerting notification.</p>
-<p id="rfc.section.3.1.p.6">The second issue is geolocation-aware system.  A major emergency alert such as an earthquake or a tsunami is distributed at geolocation specific area based on the cellular cell or WiFi cell.  Web Push relies on HTTP/2 <a href="#I-D.ietf-httpbis-http2">[I-D.ietf-httpbis-http2]</a> which relies on IP network.  Geolocation</p>
+<p id="rfc.section.3.1.p.6">The second issue is geolocation-aware system.  A major emergency alert such as an earthquake or a tsunami is distributed at geolocation specific area based on the cellular cell or WiFi cell. Web Push relies on HTTP/2 <a href="#I-D.ietf-httpbis-http2">[I-D.ietf-httpbis-http2]</a> which relies on IP network.  Geofencing <a href="#Geofencing">[Geofencing]</a> is discussed in W3C Geolocation WG to let the application to interact with the loose location-aware computation without knowing device&#8217;s exact location. However, geofencing needs device&#8217;s support, Web Push emergency alerting notification system has to have a mechanism to detect device&#8217;s location to send a location specific alerts.</p>
 <h1 id="rfc.section.3.2"><a href="#rfc.section.3.2">3.2.</a> <a href="#use-case-of-web-push-emergency-alerting-notification" id="use-case-of-web-push-emergency-alerting-notification">Use case of Web Push Emergency Alerting Notification</a></h1>
 <p id="rfc.section.3.2.p.1">There are two potential use case of Web Push Emergency Alerting notification.</p>
 <p id="rfc.section.3.2.p.2">The first use case is a Web-based Signage. Digital signage has widely deployed among the world. Signages located at public area such as train station or street play a significant role in natural disaster or accident by providing the evacuation alert or correct informations. Recent few years W3C worked on Web-based signage which has Web browser is embedded, allowing to display or play Web content. Disaster use case is proposed in W3C Web-based Signage Scenarios and Use Cases <a href="#SignageUseCase">[SignageUseCase]</a>.</p>
-<p id="rfc.section.3.2.p.3">The second use case is an over-the-top emergency alerting system operated by a local authorities or a government.  An emgergency alerting of an major natural disaster such as an earthquake or a tsunami could be distributed by existing emergency alerting system (e.g. PWS).  However, distributing an emergency alerting of an minor natual disaster such as heavy rain alert using existing method is too complicated compared to the importance of the information or alert. Web Push emergency alerting notification can provide more specific alert or information requested by the mobile or desktop application not requiring 3GPP or WiFi network. For example:</p>
+<p id="rfc.section.3.2.p.3">The second use case is an over-the-top emergency alerting system operated by a local authorities or a government. An emgergency alerting of an major natural disaster such as an earthquake or a tsunami could be distributed by existing emergency alerting system (e.g. PWS). However, distributing an emergency alerting of an minor natual disaster such as heavy rain alert using existing method is too complicated compared to the importance of the information or alert. Web Push emergency alerting notification can provide more specific alert or information requested by the mobile or desktop application not requiring 3GPP or WiFi network. For example:</p>
 <p/>
 
 <ul>
@@ -580,7 +580,8 @@ ul.toc a:first-child {
 <p id="rfc.section.3.3.p.1">Non-emergency but important notification is required to</p>
 <h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#security-consideration" id="security-consideration">Security Consideration</a></h1>
 <p id="rfc.section.4.p.1">Discovery of Push Server and application is out of scope in this document.  However, discovery of reliable Push Server and application is definitely important. Also, it is important for Web Push Emergency Alerting notification to have a mechanism to avoid the abuse of system.</p>
-<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#iana-consideration-tbd" id="iana-consideration-tbd">IANA Consideration TBD</a></h1>
+<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#iana-consideration" id="iana-consideration">IANA Consideration</a></h1>
+<p id="rfc.section.5.p.1">TBD</p>
 <h1 id="rfc.references"><a href="#rfc.references">6.</a> References</h1>
 <h1 id="rfc.references.1"><a href="#rfc.references.1">6.1.</a> Normative References</h1>
 <table>
@@ -597,6 +598,12 @@ ul.toc a:first-child {
 <table>
   <tbody>
     <tr><td class="reference"><b id="CAP">[CAP]</b></td><td class="top"><a>Common Alerting Protocol v1.2</a>", July 2010.</td>, "</tr>
+    <tr>
+      <td class="reference">
+        <b id="Geofencing">[Geofencing]</b>
+      </td>
+      <td class="top"><a>Mandyam, G.</a>, "<a href="https://gmandyam.github.io/enhanced-geolocation/">Enhanced Geolocation</a>", August 2014.</td>
+    </tr>
     <tr>
       <td class="reference">
         <b id="I-D.ietf-httpbis-http2">[I-D.ietf-httpbis-http2]</b>
