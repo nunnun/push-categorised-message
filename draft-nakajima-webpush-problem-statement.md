@@ -48,6 +48,13 @@ informative:
       ins: "F. Hatano"
     target: "http://www.w3.org/community/websignage/wiki/Web-based_Signage_Use_cases_and_Requirements"
     date: 2013-01
+  Geofencing:
+    title: "Enhanced Geolocation"
+    author:
+      name: "Giridhar Mandyam"
+      ins: "G. Mandyam"
+    target: "https://gmandyam.github.io/enhanced-geolocation/"
+    date: 2014-08-23
 
 
 --- abstract
@@ -112,8 +119,13 @@ alerting notification.
 
 The second issue is geolocation-aware system.  A major emergency alert such as
 an earthquake or a tsunami is distributed at geolocation specific area based on
-the cellular cell or WiFi cell.  Web Push relies on HTTP/2
-{{I-D.ietf-httpbis-http2}} which relies on IP network.  Geolocation 
+the cellular cell or WiFi cell. Web Push relies on HTTP/2
+{{I-D.ietf-httpbis-http2}} which relies on IP network.  Geofencing
+{{Geofencing}} is discussed in W3C Geolocation WG to let the application to
+interact with the loose location-aware computation without knowing device's
+exact location. However, geofencing needs device's support, Web Push emergency
+alerting notification system has to have a mechanism to detect device's
+location to send a location specific alerts.
 
 ## Use case of Web Push Emergency Alerting Notification
 
@@ -128,9 +140,9 @@ Web content. Disaster use case is proposed in W3C Web-based Signage Scenarios
 and Use Cases {{SignageUseCase}}. 
 
 The second use case is an over-the-top emergency alerting system operated by a
-local authorities or a government.  An emgergency alerting of an major natural
+local authorities or a government. An emgergency alerting of an major natural
 disaster such as an earthquake or a tsunami could be distributed by existing
-emergency alerting system (e.g. PWS).  However, distributing an emergency
+emergency alerting system (e.g. PWS). However, distributing an emergency
 alerting of an minor natual disaster such as heavy rain alert using existing
 method is too complicated compared to the importance of the information or
 alert. Web Push emergency alerting notification can provide more specific alert
@@ -150,5 +162,6 @@ However, discovery of reliable Push Server and application is definitely
 important. Also, it is important for Web Push Emergency Alerting notification to
 have a mechanism to avoid the abuse of system.
 
-# IANA Consideration TBD
+# IANA Consideration
+TBD
 
