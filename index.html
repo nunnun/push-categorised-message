@@ -456,11 +456,14 @@ ul.toc a:first-child {
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction"/>
 <link href="#rfc.section.2" rel="Chapter" title="2 Terminology"/>
 <link href="#rfc.section.3" rel="Chapter" title="3 Problem Statement"/>
-<link href="#rfc.section.3.1" rel="Chapter" title="3.1 Emergency Notification"/>
-<link href="#rfc.section.3.2" rel="Chapter" title="3.2 Important Notification delivery"/>
-<link href="#rfc.references" rel="Chapter" title="4 References"/>
-<link href="#rfc.references.1" rel="Chapter" title="4.1 Normative References"/>
-<link href="#rfc.references.2" rel="Chapter" title="4.2 Informative References"/>
+<link href="#rfc.section.3.1" rel="Chapter" title="3.1 Issues on existing emergency alerting system"/>
+<link href="#rfc.section.3.2" rel="Chapter" title="3.2 Use case of Web Push Emergency Alerting Notification"/>
+<link href="#rfc.section.3.3" rel="Chapter" title="3.3 Non-emergency, Important notifivation"/>
+<link href="#rfc.section.4" rel="Chapter" title="4 Security Consideration"/>
+<link href="#rfc.section.5" rel="Chapter" title="5 IANA Consideration"/>
+<link href="#rfc.references" rel="Chapter" title="6 References"/>
+<link href="#rfc.references.1" rel="Chapter" title="6.1 Normative References"/>
+<link href="#rfc.references.2" rel="Chapter" title="6.2 Informative References"/>
 <link href="#rfc.authors" rel="Chapter"/>
 
 
@@ -530,11 +533,14 @@ ul.toc a:first-child {
   	<li>1.   <a href="#rfc.section.1">Introduction</a></li>
 <li>2.   <a href="#rfc.section.2">Terminology</a></li>
 <li>3.   <a href="#rfc.section.3">Problem Statement</a></li>
-<ul><li>3.1.   <a href="#rfc.section.3.1">Emergency Notification</a></li>
-<li>3.2.   <a href="#rfc.section.3.2">Important Notification delivery</a></li>
-</ul><li>4.   <a href="#rfc.references">References</a></li>
-<ul><li>4.1.   <a href="#rfc.references.1">Normative References</a></li>
-<li>4.2.   <a href="#rfc.references.2">Informative References</a></li>
+<ul><li>3.1.   <a href="#rfc.section.3.1">Issues on existing emergency alerting system</a></li>
+<li>3.2.   <a href="#rfc.section.3.2">Use case of Web Push Emergency Alerting Notification</a></li>
+<li>3.3.   <a href="#rfc.section.3.3">Non-emergency, Important notifivation</a></li>
+</ul><li>4.   <a href="#rfc.section.4">Security Consideration</a></li>
+<li>5.   <a href="#rfc.section.5">IANA Consideration</a></li>
+<li>6.   <a href="#rfc.references">References</a></li>
+<ul><li>6.1.   <a href="#rfc.references.1">Normative References</a></li>
+<li>6.2.   <a href="#rfc.references.2">Informative References</a></li>
 </ul><li><a href="#rfc.authors">Author's Address</a></li>
 
 
@@ -551,37 +557,38 @@ ul.toc a:first-child {
   <li>Able to broadcast Warning notifications based on geographical information.</li>
   <li>Provides reliable, secure delivery of Warning notification over 3GPP system.</li>
 </ul>
-<p id="rfc.section.1.p.5">Addition to PWS in the WiFi network, IEEE 802.11u <a href="#IEEE80211u">[IEEE80211u]</a> has an emergency support which uses Common Alerting Protocol (CAP) <a href="#CAP">[CAP]</a>.</p>
-<p id="rfc.section.1.p.6">At IETF, Atoca WG has worked for</p>
+<p id="rfc.section.1.p.5">Addition to PWS, some work has been made to distribute the emergency alerting notification on different network. In the WiFi network, IEEE 802.11u <a href="#IEEE80211u">[IEEE80211u]</a> has an emergency support which uses Common Alerting Protocol (CAP) <a href="#CAP">[CAP]</a>. Also, Atoca WG has worked for defining the secure alerting format to broadcast CAP-based alert over IP network.</p>
+<p id="rfc.section.1.p.6">Those previous contribuions have been made to improve</p>
 <p id="rfc.section.1.p.7">This document will describe various use cases and requirements of emergency notification system using Web Push.</p>
 <h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#terminology" id="terminology">Terminology</a></h1>
 <p id="rfc.section.2.p.1">In cases where normative language needs to be emphasized, this document back on established shorthands for expressing interoperability requirements on implementations: the capitalized words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;SHOULD&#8221; and &#8220;MAY&#8221;.  The meaning of these is described in <a href="#RFC2119">[RFC2119]</a>.</p>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#problem" id="problem">Problem Statement</a></h1>
-<p id="rfc.section.3.p.1">TODO: show why this draft is needed.</p>
+<h1 id="rfc.section.3.1"><a href="#rfc.section.3.1">3.1.</a> <a href="#issues-on-existing-emergency-alerting-system" id="issues-on-existing-emergency-alerting-system">Issues on existing emergency alerting system</a></h1>
 <p/>
 
 <ul>
-  <li>&#26082;&#23384;&#32202;&#24613;&#36890;&#22577;&#12398;&#12513;&#12459;&#12491;&#12474;&#12512;&#12399;&#38480;&#23450;&#30340;&#12394;&#29872;&#22659;&#12391;&#12375;&#12363;&#21205;&#20316;&#12375;&#12394;&#12356;</li>
-  <li>&#27161;&#28310;&#21270;&#12373;&#12428;&#12383;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#36890;&#30693;&#12398;&#12513;&#12459;&#12491;&#12474;&#12512;&#12364;&#23384;&#22312;&#12375;&#12394;&#12356;</li>
-  <li>&#29420;&#33258;&#12398;&#23455;&#35013;&#12398;&#20363;&#12434;&#25369;&#12370;&#12427;</li>
-  <li>&#12513;&#12483;&#12475;&#12540;&#12472;&#12501;&#12457;&#12540;&#12510;&#12483;&#12488;&#12398;&#20107;&#20363;&#12434;&#26360;&#12367;</li>
-  <li>&#32202;&#24613;&#12376;&#12419;&#12394;&#12367;&#12390;&#12418;&#37325;&#35201;&#12394;&#36890;&#30693;&#12434;&#34892;&#12358;</li>
+  <li>Rely on specific underlaying technology (e.g. 3GPP, 802.11u)</li>
+  <li>Geo-based notification</li>
 </ul>
-<h1 id="rfc.section.3.1"><a href="#rfc.section.3.1">3.1.</a> <a href="#emergency-notification" id="emergency-notification">Emergency Notification</a></h1>
+<h1 id="rfc.section.3.2"><a href="#rfc.section.3.2">3.2.</a> <a href="#use-case-of-web-push-emergency-alerting-notification" id="use-case-of-web-push-emergency-alerting-notification">Use case of Web Push Emergency Alerting Notification</a></h1>
 <p/>
 
 <ul>
-  <li>ETWS case</li>
-  <li>802.11u case</li>
-  <li>Yurekuru case</li>
-  <li>Web-based Signage case</li>
-  <li>CAP protocol</li>
-  <li>Atoca WG</li>
+  <li>Web-based Signage</li>
+  <li>OTT emergency alerting system (local goverment or authorities)</li>
 </ul>
-<h1 id="rfc.section.3.2"><a href="#rfc.section.3.2">3.2.</a> <a href="#important-notification-delivery" id="important-notification-delivery">Important Notification delivery</a></h1>
-<p id="rfc.section.3.2.p.1">Application Important notification delivery e.g. rtcweb incoming call</p>
-<h1 id="rfc.references"><a href="#rfc.references">4.</a> References</h1>
-<h1 id="rfc.references.1"><a href="#rfc.references.1">4.1.</a> Normative References</h1>
+<h1 id="rfc.section.3.3"><a href="#rfc.section.3.3">3.3.</a> <a href="#non-emergency-important-notifivation" id="non-emergency-important-notifivation">Non-emergency, Important notifivation</a></h1>
+<p/>
+
+<ul>
+  <li>Incoming call</li>
+</ul>
+<h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#security-consideration" id="security-consideration">Security Consideration</a></h1>
+<p id="rfc.section.4.p.1">TBD</p>
+<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#iana-consideration" id="iana-consideration">IANA Consideration</a></h1>
+<p id="rfc.section.5.p.1">TBD</p>
+<h1 id="rfc.references"><a href="#rfc.references">6.</a> References</h1>
+<h1 id="rfc.references.1"><a href="#rfc.references.1">6.1.</a> Normative References</h1>
 <table>
   <tbody>
     <tr>
@@ -592,7 +599,7 @@ ul.toc a:first-child {
     </tr>
   </tbody>
 </table>
-<h1 id="rfc.references.2"><a href="#rfc.references.2">4.2.</a> Informative References</h1>
+<h1 id="rfc.references.2"><a href="#rfc.references.2">6.2.</a> Informative References</h1>
 <table>
   <tbody>
     <tr><td class="reference"><b id="API">[API]</b></td><td class="top"><a href="https://w3c.github.io/push-api/">Web Push API</a>", n.d..</td>, "</tr>
@@ -601,13 +608,7 @@ ul.toc a:first-child {
       <td class="reference">
         <b id="I-D.ietf-httpbis-http2">[I-D.ietf-httpbis-http2]</b>
       </td>
-      <td class="top"><a>Belshe, M.</a>, <a>Peon, R.</a> and <a>M. Thomson</a>, "<a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-17">Hypertext Transfer Protocol version 2</a>", Internet-Draft draft-ietf-httpbis-http2-17, February 2015.</td>
-    </tr>
-    <tr>
-      <td class="reference">
-        <b id="I-D.thomson-webpush-aggregate">[I-D.thomson-webpush-aggregate]</b>
-      </td>
-      <td class="top"><a>Thomson, M.</a>, <a href="http://tools.ietf.org/html/draft-thomson-webpush-aggregate-00">Web Push Channel Aggregation</a>", Internet-Draft draft-thomson-webpush-aggregate-00, October 2014.</td>
+      <td class="top"><a>Belshe, M.</a>, <a>Peon, R.</a> and <a>M. Thomson</a>, <a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-17">Hypertext Transfer Protocol version 2</a>", Internet-Draft draft-ietf-httpbis-http2-17, February 2015.</td>
     </tr>
     <tr>
       <td class="reference">

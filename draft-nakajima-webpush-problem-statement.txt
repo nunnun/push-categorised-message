@@ -68,12 +68,15 @@ Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Problem Statement . . . . . . . . . . . . . . . . . . . . . .   3
-     3.1.  Emergency Notification  . . . . . . . . . . . . . . . . .   3
-     3.2.  Important Notification delivery . . . . . . . . . . . . .   4
-   4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     4.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
-     4.2.  Informative References  . . . . . . . . . . . . . . . . .   4
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
+     3.1.  Issues on existing emergency alerting system  . . . . . .   3
+     3.2.  Use case of Web Push Emergency Alerting Notification  . .   3
+     3.3.  Non-emergency, Important notifivation . . . . . . . . . .   3
+   4.  Security Consideration  . . . . . . . . . . . . . . . . . . .   3
+   5.  IANA Consideration  . . . . . . . . . . . . . . . . . . . . .   3
+   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   4
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
 
@@ -100,12 +103,9 @@ Table of Contents
    o  Provides reliable, secure delivery of Warning notification over
       3GPP system.
 
-   Addition to PWS in the WiFi network, IEEE 802.11u [IEEE80211u] has an
-   emergency support which uses Common Alerting Protocol (CAP) [CAP].
-
-   At IETF, Atoca WG has worked for
-
-
+   Addition to PWS, some work has been made to distribute the emergency
+   alerting notification on different network.  In the WiFi network,
+   IEEE 802.11u [IEEE80211u] has an emergency support which uses Common
 
 
 
@@ -113,6 +113,12 @@ Nakajima               Expires September 10, 2015               [Page 2]
 
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
+
+   Alerting Protocol (CAP) [CAP].  Also, Atoca WG has worked for
+   defining the secure alerting format to broadcast CAP-based alert over
+   IP network.
+
+   Those previous contribuions have been made to improve
 
    This document will describe various use cases and requirements of
    emergency notification system using Web Push.
@@ -127,41 +133,35 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 3.  Problem Statement
 
-   TODO: show why this draft is needed.
+3.1.  Issues on existing emergency alerting system
 
-   o  &#26082;&#23384;&#32202;&#24613;&#36890;&#22577;&#12398;&#12513;&#
-      12459;&#12491;&#12474;&#12512;&#12399;&#38480;&#23450;&#30340;&#12
-      394;&#29872;&#22659;&#12391;&#12375;&#12363;&#21205;&#20316;&#1237
-      5;&#12394;&#12356;
+   o  Rely on specific underlaying technology (e.g. 3GPP, 802.11u)
 
-   o  &#27161;&#28310;&#21270;&#12373;&#12428;&#12383;&#12450;&#12503;&#
-      12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#36890;&#30693;&#12
-      398;&#12513;&#12459;&#12491;&#12474;&#12512;&#12364;&#23384;&#2231
-      2;&#12375;&#12394;&#12356;
+   o  Geo-based notification
 
-   o  &#29420;&#33258;&#12398;&#23455;&#35013;&#12398;&#20363;&#12434;&#
-      25369;&#12370;&#12427;
+3.2.  Use case of Web Push Emergency Alerting Notification
 
-   o  &#12513;&#12483;&#12475;&#12540;&#12472;&#12501;&#12457;&#12540;&#
-      12510;&#12483;&#12488;&#12398;&#20107;&#20363;&#12434;&#26360;&#12
-      367;
+   o  Web-based Signage
 
-   o  &#32202;&#24613;&#12376;&#12419;&#12394;&#12367;&#12390;&#12418;&#
-      37325;&#35201;&#12394;&#36890;&#30693;&#12434;&#34892;&#12358;
+   o  OTT emergency alerting system (local goverment or authorities)
 
-3.1.  Emergency Notification
+3.3.  Non-emergency, Important notifivation
 
-   o  ETWS case
+   o  Incoming call
 
-   o  802.11u case
+4.  Security Consideration
 
-   o  Yurekuru case
+   TBD
 
-   o  Web-based Signage case
+5.  IANA Consideration
 
-   o  CAP protocol
+   TBD
 
-   o  Atoca WG
+6.  References
+
+
+
+
 
 
 
@@ -170,18 +170,12 @@ Nakajima               Expires September 10, 2015               [Page 3]
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 
-3.2.  Important Notification delivery
-
-   Application Important notification delivery e.g. rtcweb incoming call
-
-4.  References
-
-4.1.  Normative References
+6.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997.
 
-4.2.  Informative References
+6.2.  Informative References
 
    [API]      "Web Push API", n.d., <https://w3c.github.io/push-api/>.
 
@@ -191,11 +185,6 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
               Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
               Protocol version 2", draft-ietf-httpbis-http2-17 (work in
               progress), February 2015.
-
-   [I-D.thomson-webpush-aggregate]
-              Thomson, M., "Web Push Channel Aggregation", draft-
-              thomson-webpush-aggregate-00 (work in progress), October
-              2014.
 
    [I-D.thomson-webpush-http2]
               Thomson, M., "Generic Event Delivery Using HTTP Push",
@@ -213,18 +202,6 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
    [_3GPP.22.268]
               3GPP, "Public Warning System (PWS) requirements", 3GPP TS
               22.268 10.4.0, December 2012.
-
-
-
-
-
-
-
-
-Nakajima               Expires September 10, 2015               [Page 4]
-
-Internet-DrafProblem Statement and Requirements for Web Push  March 2015
-
 
 Author's Address
 
@@ -244,37 +221,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Nakajima               Expires September 10, 2015               [Page 5]
+Nakajima               Expires September 10, 2015               [Page 4]
