@@ -22,7 +22,7 @@ normative:
 informative:
   I-D.thomson-webpush-http2:
   I-D.ietf-httpbis-http2:
-  API:
+  PushAPI:
     target: "https://w3c.github.io/push-api/"
     title: "Web Push API"
     author:
@@ -58,7 +58,7 @@ This document outlines various existing emergency alert notification system in o
 # Introduction {#intro}
 
 The delivery of real-time events such as incoming calls or messages is an essential feature of mobile application and its platform. 
-The Web Push {{I-D.thomson-webpush-http2}} protocol has been proposed to enable delierying the events required by W3C Web Push API {{API}}.
+The Web Push {{I-D.thomson-webpush-http2}} protocol has been proposed to enable delierying the events required by W3C Web Push API {{PushAPI}}.
 
 Also, emergency alerting is an apparently important feature of telecommunication network such as cellular networks, allowing the goverments or authorities to send a warnings of natural disaster or accident. 
 
