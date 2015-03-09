@@ -41,6 +41,13 @@ informative:
     date: 2011-02-25
     author:
       organization: "IEEE"
+  SignageUseCase:
+    title: "Web-based Signage Scenarios and Use Cases"
+    author: 
+      name: "Futomi Hatano"
+      ins: "F. Hatano"
+    target: http://www.w3.org/community/websignage/wiki/Web-based_Signage_Scenarios_and_Use_Cases
+    date: 2012-07
 
 
 --- abstract
@@ -87,12 +94,15 @@ The meaning of these is described in {{RFC2119}}.
 
 ## Use case of Web Push Emergency Alerting Notification
 
-- Web-based Signage
+Web-based Signage
+Digital signage has widely deployed among the unverse. Signages located at public area such as train station or street play a significant role in natural disaster or accident by providing the evacuation alert or correct informations. Recent few years W3C worked on Web-based signage which has Web browser is embedded, allowing to display or play Web content. Disaster use case is proposed in W3C Web-based Signage Scenarios and Use Cases {{SignageUseCase}}. 
+
 - OTT emergency alerting system (local goverment or authorities)
 
 ## Non-emergency, Important notification
 
 - Incoming call
+
 Non-emergency but important notification is required to 
 
 # Security Consideration
