@@ -74,9 +74,9 @@ Table of Contents
    4.  Security Consideration  . . . . . . . . . . . . . . . . . . .   4
    5.  IANA Consideration  . . . . . . . . . . . . . . . . . . . . .   4
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
+     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
      6.2.  Informative References  . . . . . . . . . . . . . . . . .   5
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -196,7 +196,10 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 3.3.  Non-emergency, Important notification
 
-   Non-emergency but important notification is required to
+   Non-emergency but important notification is required to real-time
+   applications.  Real-time application such as VoIP or
+   telecommunication application, need to deliver the notification
+   faster than other notification.
 
 4.  Security Consideration
 
@@ -212,10 +215,7 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 6.  References
 
-6.1.  Normative References
 
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119, March 1997.
 
 
 
@@ -225,6 +225,11 @@ Nakajima               Expires September 10, 2015               [Page 4]
 
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
+
+6.1.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119, March 1997.
 
 6.2.  Informative References
 
@@ -265,6 +270,18 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
               3GPP, "Public Warning System (PWS) requirements", 3GPP TS
               22.268 10.4.0, December 2012.
 
+
+
+
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 5]
+
+Internet-DrafProblem Statement and Requirements for Web Push  March 2015
+
+
 Author's Address
 
    Hirotaka Nakajima
@@ -277,4 +294,43 @@ Author's Address
 
 
 
-Nakajima               Expires September 10, 2015               [Page 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 6]
