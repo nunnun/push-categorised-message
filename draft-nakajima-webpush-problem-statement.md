@@ -31,7 +31,7 @@ informative:
     title: "Earthquake and Tsunami Warning System (ETWS) requirements"
     date: 2008-06
     author:
-      name: "3GPP"
+      organization: "3GPP"
 
 --- abstract
 
