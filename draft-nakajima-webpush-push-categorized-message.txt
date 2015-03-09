@@ -4,8 +4,8 @@
 
 Network Working Group                                        H. Nakajima
 Internet-Draft                                           Keio University
-Intended status: Standards Track                           March 8, 2015
-Expires: September 9, 2015
+Intended status: Standards Track                           March 9, 2015
+Expires: September 10, 2015
 
 
                     Categorized Message for Web Push
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on September 9, 2015.
+   This Internet-Draft will expire on September 10, 2015.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Nakajima                Expires September 9, 2015               [Page 1]
+Nakajima               Expires September 10, 2015               [Page 1]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Nakajima                Expires September 9, 2015               [Page 2]
+Nakajima               Expires September 10, 2015               [Page 2]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
@@ -165,7 +165,7 @@ Internet-Draft        Web Push Categorized Message            March 2015
 
 
 
-Nakajima                Expires September 9, 2015               [Page 3]
+Nakajima               Expires September 10, 2015               [Page 3]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
@@ -221,7 +221,7 @@ Internet-Draft        Web Push Categorized Message            March 2015
 
 
 
-Nakajima                Expires September 9, 2015               [Page 4]
+Nakajima               Expires September 10, 2015               [Page 4]
 
 Internet-Draft        Web Push Categorized Message            March 2015
 
@@ -277,4 +277,4 @@ Author's Address
 
 
 
-Nakajima                Expires September 9, 2015               [Page 5]
+Nakajima               Expires September 10, 2015               [Page 5]
