@@ -66,13 +66,13 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   2
-   3.  Problem Statement . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Problem Statement . . . . . . . . . . . . . . . . . . . . . .   3
      3.1.  Emergency Notification  . . . . . . . . . . . . . . . . .   3
-     3.2.  Important Notification delivery . . . . . . . . . . . . .   3
-   4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
-     4.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
-     4.2.  Informative References  . . . . . . . . . . . . . . . . .   3
+     3.2.  Important Notification delivery . . . . . . . . . . . . .   4
+   4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     4.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
+     4.2.  Informative References  . . . . . . . . . . . . . . . . .   4
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
@@ -85,8 +85,34 @@ Table of Contents
    Also, emergency alerting is an apparently important feature of
    telecommunication network such as cellular networks, allowing the
    goverments or authorities to send a warnings of natural disaster or
-   accident.  In the cellular network, Earthquake and Tsunami Warning
-   System [TS22168] has been developed and deployed
+   accident.  In the cellular network, several emergency alerting
+   mechanisms have been proposed and merged into Public Warning
+   System(PWS) [TS22268].  PWS provides several functions for example:
+
+   o  Able to broadcast Warning notifications to multiple devices
+      simultaneously.
+
+   o  Able to broadcast Warning notifications based on geographical
+      information.
+
+   o  Provides reliable, secure delivery of Warning notification over
+      3GPP system.
+
+   Addition to PWS,
+
+   This document will describe various use cases and requirements of
+   emergency notification system using Web Push.
+
+
+
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 2]
+
+Internet-DrafProblem Statement and Requirements for Web Push  March 2015
+
 
 2.  Terminology
 
@@ -104,15 +130,6 @@ Table of Contents
       12459;&#12491;&#12474;&#12512;&#12399;&#38480;&#23450;&#30340;&#12
       394;&#29872;&#22659;&#12391;&#12375;&#12363;&#21205;&#20316;&#1237
       5;&#12394;&#12356;
-
-
-
-
-
-Nakajima               Expires September 10, 2015               [Page 2]
-
-Internet-DrafProblem Statement and Requirements for Web Push  March 2015
-
 
    o  &#27161;&#28310;&#21270;&#12373;&#12428;&#12383;&#12450;&#12503;&#
       12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#36890;&#30693;&#12
@@ -137,9 +154,21 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
    o  Yurekuru case
 
+   o  Web-based Signage case
+
    o  CAP protocol
 
    o  Atoca WG
+
+
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 3]
+
+Internet-DrafProblem Statement and Requirements for Web Push  March 2015
+
 
 3.2.  Important Notification delivery
 
@@ -152,23 +181,9 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997.
 
-   [RFC3864]  Klyne, G., Nottingham, M., and J. Mogul, "Registration
-              Procedures for Message Header Fields", BCP 90, RFC 3864,
-              September 2004.
-
 4.2.  Informative References
 
    [API]      "Web Push API", n.d., <https://w3c.github.io/push-api/>.
-
-
-
-
-
-
-Nakajima               Expires September 10, 2015               [Page 3]
-
-Internet-DrafProblem Statement and Requirements for Web Push  March 2015
-
 
    [I-D.ietf-httpbis-http2]
               Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
@@ -185,8 +200,8 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
               draft-thomson-webpush-http2-02 (work in progress),
               December 2014.
 
-   [TS22168]  3GPP, "Earthquake and Tsunami Warning System (ETWS)
-              requirements", June 2008.
+   [TS22268]  3GPP, "Public Warning System (PWS) requirements",
+              September 2014.
 
 Author's Address
 
@@ -194,21 +209,6 @@ Author's Address
    Keio University
 
    Email: hiro@awa.sfc.keio.ac.jp
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

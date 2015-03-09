@@ -542,7 +542,16 @@ ul.toc a:first-child {
 
   <h1 id="rfc.section.1"><a href="#rfc.section.1">1.</a> <a href="#intro" id="intro">Introduction</a></h1>
 <p id="rfc.section.1.p.1">The delivery of real-time events such as incoming calls or messages is an essential feature of mobile application and its platform.  The Web Push <a href="#I-D.thomson-webpush-http2">[I-D.thomson-webpush-http2]</a> protocol has been proposed to enable delierying the events required by W3C Web Push API <a href="#API">[API]</a>.</p>
-<p id="rfc.section.1.p.2">Also, emergency alerting is an apparently important feature of telecommunication network such as cellular networks, allowing the goverments or authorities to send a warnings of natural disaster or accident.  In the cellular network, Earthquake and Tsunami Warning System <a href="#TS22168">[TS22168]</a> has been developed and deployed</p>
+<p id="rfc.section.1.p.2">Also, emergency alerting is an apparently important feature of telecommunication network such as cellular networks, allowing the goverments or authorities to send a warnings of natural disaster or accident.  In the cellular network, several emergency alerting mechanisms have been proposed and merged into Public Warning System(PWS) <a href="#TS22268">[TS22268]</a>. PWS provides several functions for example:</p>
+<p/>
+
+<ul>
+  <li>Able to broadcast Warning notifications to multiple devices simultaneously.</li>
+  <li>Able to broadcast Warning notifications based on geographical information.</li>
+  <li>Provides reliable, secure delivery of Warning notification over 3GPP system.</li>
+</ul>
+<p id="rfc.section.1.p.4">Addition to PWS,</p>
+<p id="rfc.section.1.p.5">This document will describe various use cases and requirements of emergency notification system using Web Push.</p>
 <h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#terminology" id="terminology">Terminology</a></h1>
 <p id="rfc.section.2.p.1">In cases where normative language needs to be emphasized, this document back on established shorthands for expressing interoperability requirements on implementations: the capitalized words &#8220;MUST&#8221;, &#8220;MUST NOT&#8221;, &#8220;SHOULD&#8221; and &#8220;MAY&#8221;.  The meaning of these is described in <a href="#RFC2119">[RFC2119]</a>.</p>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#problem" id="problem">Problem Statement</a></h1>
@@ -563,6 +572,7 @@ ul.toc a:first-child {
   <li>ETWS case</li>
   <li>802.11u case</li>
   <li>Yurekuru case</li>
+  <li>Web-based Signage case</li>
   <li>CAP protocol</li>
   <li>Atoca WG</li>
 </ul>
@@ -577,12 +587,6 @@ ul.toc a:first-child {
         <b id="RFC2119">[RFC2119]</b>
       </td>
       <td class="top"><a href="mailto:sob@harvard.edu" title="Harvard University">Bradner, S.</a>, "<a href="http://tools.ietf.org/html/rfc2119">Key words for use in RFCs to Indicate Requirement Levels</a>", BCP 14, RFC 2119, March 1997.</td>
-    </tr>
-    <tr>
-      <td class="reference">
-        <b id="RFC3864">[RFC3864]</b>
-      </td>
-      <td class="top"><a>Klyne, G.</a>, <a>Nottingham, M.</a> and <a>J. Mogul</a>, "<a href="http://tools.ietf.org/html/rfc3864">Registration Procedures for Message Header Fields</a>", BCP 90, RFC 3864, September 2004.</td>
     </tr>
   </tbody>
 </table>
@@ -610,9 +614,9 @@ ul.toc a:first-child {
     </tr>
     <tr>
       <td class="reference">
-        <b id="TS22168">[TS22168]</b>
+        <b id="TS22268">[TS22268]</b>
       </td>
-      <td class="top"><a>3GPP</a>, "<a>Earthquake and Tsunami Warning System (ETWS) requirements</a>", June 2008.</td>
+      <td class="top"><a>3GPP</a>, "<a>Public Warning System (PWS) requirements</a>", September 2014.</td>
     </tr>
   </tbody>
 </table>
