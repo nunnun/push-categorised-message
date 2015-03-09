@@ -25,15 +25,9 @@ informative:
   PushAPI:
     target: "https://w3c.github.io/push-api/"
     title: "Web Push API"
+    date: 2015-02
     author:
-      ins: "B. Sullivan"
-      name: "Bryan Sullivan"
-    author:
-      ins: "E. Fullea"
-      name: "Eduardo Fullea"
-    author:
-      ins: "M. Ouwerkerk"
-      name: "Michaël van Ouwerkerk"
+      organization: "W3C"
   3GPP.22.268:
   CAP:
     title: "Common Alerting Protocol v1.2"
