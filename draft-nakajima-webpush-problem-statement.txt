@@ -199,7 +199,7 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
               (MAC) and Physical Layer (PHY) specifications: Amendment
               9: Interworking with External Networks", February 2011.
 
-   [PushAPI]  Ouwerkerk, M., "Web Push API", n.d.,
+   [PushAPI]  W3C, "Web Push API", February 2015,
               <https://w3c.github.io/push-api/>.
 
    [_3GPP.22.268]
