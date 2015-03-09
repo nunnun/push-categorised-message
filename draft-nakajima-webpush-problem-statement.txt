@@ -172,7 +172,11 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 4.  Security Consideration
 
-   TBD
+   Discovery of Push Server and application is out of scope in this
+   document.  However, discovery of reliable Push Server and application
+   is definitely important.  Also, it is important for Web Push
+   Emergency Alerting notification to have a mechanism to avoid the
+   abuse of system.
 
 5.  IANA Consideration
 
@@ -210,11 +214,7 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
    [PushAPI]  W3C, "Web Push API", February 2015,
               <https://w3c.github.io/push-api/>.
 
-   [SignageUseCase]
-              Hatano, F., "Web-based Signage Scenarios and Use Cases",
-              January 2013,
-              <http://www.w3.org/community/websignage/wiki/
-              Web-based_Signage_Use_cases_and_Requirements>.
+
 
 
 
@@ -226,6 +226,12 @@ Nakajima               Expires September 10, 2015               [Page 4]
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 
+   [SignageUseCase]
+              Hatano, F., "Web-based Signage Scenarios and Use Cases",
+              January 2013,
+              <http://www.w3.org/community/websignage/wiki/
+              Web-based_Signage_Use_cases_and_Requirements>.
+
    [_3GPP.22.268]
               3GPP, "Public Warning System (PWS) requirements", 3GPP TS
               22.268 10.4.0, December 2012.
@@ -236,12 +242,6 @@ Author's Address
    Keio University
 
    Email: hiro@awa.sfc.keio.ac.jp
-
-
-
-
-
-
 
 
 
