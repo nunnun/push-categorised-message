@@ -458,12 +458,9 @@ ul.toc a:first-child {
 <link href="#rfc.section.3" rel="Chapter" title="3 Problem Statement"/>
 <link href="#rfc.section.3.1" rel="Chapter" title="3.1 Emergency Notification"/>
 <link href="#rfc.section.3.2" rel="Chapter" title="3.2 Important Notification delivery"/>
-<link href="#rfc.section.4" rel="Chapter" title="4 Categorized push subscription"/>
-<link href="#rfc.section.5" rel="Chapter" title="5 Security Considerations"/>
-<link href="#rfc.section.6" rel="Chapter" title="6 IANA Considerations"/>
-<link href="#rfc.references" rel="Chapter" title="7 References"/>
-<link href="#rfc.references.1" rel="Chapter" title="7.1 Normative References"/>
-<link href="#rfc.references.2" rel="Chapter" title="7.2 Informative References"/>
+<link href="#rfc.references" rel="Chapter" title="4 References"/>
+<link href="#rfc.references.1" rel="Chapter" title="4.1 Normative References"/>
+<link href="#rfc.references.2" rel="Chapter" title="4.2 Informative References"/>
 <link href="#rfc.authors" rel="Chapter"/>
 
 
@@ -535,12 +532,9 @@ ul.toc a:first-child {
 <li>3.   <a href="#rfc.section.3">Problem Statement</a></li>
 <ul><li>3.1.   <a href="#rfc.section.3.1">Emergency Notification</a></li>
 <li>3.2.   <a href="#rfc.section.3.2">Important Notification delivery</a></li>
-</ul><li>4.   <a href="#rfc.section.4">Categorized push subscription</a></li>
-<li>5.   <a href="#rfc.section.5">Security Considerations</a></li>
-<li>6.   <a href="#rfc.section.6">IANA Considerations</a></li>
-<li>7.   <a href="#rfc.references">References</a></li>
-<ul><li>7.1.   <a href="#rfc.references.1">Normative References</a></li>
-<li>7.2.   <a href="#rfc.references.2">Informative References</a></li>
+</ul><li>4.   <a href="#rfc.references">References</a></li>
+<ul><li>4.1.   <a href="#rfc.references.1">Normative References</a></li>
+<li>4.2.   <a href="#rfc.references.2">Informative References</a></li>
 </ul><li><a href="#rfc.authors">Author's Address</a></li>
 
 
@@ -574,79 +568,8 @@ ul.toc a:first-child {
 </ul>
 <h1 id="rfc.section.3.2"><a href="#rfc.section.3.2">3.2.</a> <a href="#important-notification-delivery" id="important-notification-delivery">Important Notification delivery</a></h1>
 <p id="rfc.section.3.2.p.1">Application Important notification delivery e.g. rtcweb incoming call</p>
-<h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#category" id="category">Categorized push subscription</a></h1>
-<p id="rfc.section.4.p.1">A new header field &#8220;Push-Category&#8221; is provided in subscribe request to indicate priority of new subscription.</p>
-<div id="rfc.figure.1"/>
-<div id="figxmpstore"/>
-<pre>
-POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1
-Host: push.example.net
-Push-Category: Normal
-</pre>
-<p class="figure">Figure 1: Example of push subscribe request with Push-Category header</p>
-<p id="rfc.section.4.p.2">The &#8220;Push-Category&#8221; HTTP header field is an OPTIONAL header field that, when used, indicates a priority of push subscription and its delivery.</p>
-<p id="rfc.section.4.p.3">The following categories are defined:</p>
-<p id="rfc.section.4.p.4">normal: &#8220;normal&#8221; category indicates that push subscription</p>
-<p id="rfc.section.4.p.5">important: &#8220;important&#8221; category indicates that push channel MUST be delivered prior to &#8220;normal&#8221; push channel. Application MUST send a push message with stream which has a higher weight compared to Default stream priorities defined at <a href="#I-D.ietf-httpbis-http2">[I-D.ietf-httpbis-http2]</a>.</p>
-<pre>
-    +-------+           +--------------+       +-------------+
-    |  UA   |           | Push Service |       | Application |
-    +-------+           +--------------+       +-------------+
-        |                      |                      |
-        |      Register        |                      |
-        |---------------------&gt;|                      |
-        |       Monitor        |                      |
-        |&lt;====================&gt;|                      |
-        |      Subscribe       |                      |
-        |---------------------&gt;|                      |
-        |           Provide Subscription              |
-        |--------------------------------------------&gt;|
-        |                      |                      |
-        :                      :                      :
-        |                      |     Push Message     |
-        |                      | with PRIORITY header |
-        |    Push Message      |&lt;---------------------|
-        |&lt;---------------------|                      |
-        |                      |                      |
-</pre>
-<p id="rfc.section.4.p.6">emergency: &#8220;emergency&#8221; category indicates that push channel MUST be delivered prior to any other categorized or uncategorized push channel. User Agent MUST send a aggregated channel creation request <a href="#I-D.thomson-webpush-aggregate">[I-D.thomson-webpush-aggregate]</a>. Application MUST send a push message with stream which has a highest weight compared to other stream on the connection.</p>
-<pre>
-    +-------+           +--------------+       +-------------+
-    |  UA   |           | Push Service |       | Application |
-    +-------+           +--------------+       +-------------+
-        |                      |                      |
-        |      Register        |                      |
-        |---------------------&gt;|                      |
-        |       Monitor        |                      |
-        |&lt;====================&gt;|                      |
-        |      Subscribe       |                      |
-        | (Aggregated Channel) |                      |
-        |---------------------&gt;|                      |
-        |           Provide Subscription              |
-        |--------------------------------------------&gt;|
-        |                      |                      |
-        :                      :                      :
-        |                      |     Push Message     |
-        |                      | with PRIORITY header |
-        |    Push Message      |&lt;---------------------|
-        |&lt;---------------------|                      |
-        |                      |                      |
-</pre>
-<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
-<h1 id="rfc.section.6"><a href="#rfc.section.6">6.</a> <a href="#iana-considerations" id="iana-considerations">IANA Considerations</a></h1>
-<p id="rfc.section.6.p.1">This document specifies the HTTP header field listed below, which has been added to the &#8220;Permanent Message Header Field Names&#8221; registry defined in <a href="#RFC3864">[RFC3864]</a>.</p>
-<pre>
-Header field: Push-Catagory
-Applicable protocol: http
-Status: standard
-Auther/Change controller:
-  IETF (iesg@ietf.org)
-  Internet Engineering Task Force
-Specification document(s): this specification
-Related information: None
-</pre>
-<h1 id="rfc.references"><a href="#rfc.references">7.</a> References</h1>
-<h1 id="rfc.references.1"><a href="#rfc.references.1">7.1.</a> Normative References</h1>
+<h1 id="rfc.references"><a href="#rfc.references">4.</a> References</h1>
+<h1 id="rfc.references.1"><a href="#rfc.references.1">4.1.</a> Normative References</h1>
 <table>
   <tbody>
     <tr>
@@ -663,7 +586,7 @@ Related information: None
     </tr>
   </tbody>
 </table>
-<h1 id="rfc.references.2"><a href="#rfc.references.2">7.2.</a> Informative References</h1>
+<h1 id="rfc.references.2"><a href="#rfc.references.2">4.2.</a> Informative References</h1>
 <table>
   <tbody>
     <tr><td class="reference"><b id="API">[API]</b></td><td class="top"><a href="https://w3c.github.io/push-api/">Web Push API</a>", n.d..</td>, "</tr>

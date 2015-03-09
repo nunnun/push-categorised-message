@@ -70,13 +70,10 @@ Table of Contents
    3.  Problem Statement . . . . . . . . . . . . . . . . . . . . . .   2
      3.1.  Emergency Notification  . . . . . . . . . . . . . . . . .   3
      3.2.  Important Notification delivery . . . . . . . . . . . . .   3
-   4.  Categorized push subscription . . . . . . . . . . . . . . . .   3
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
-   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .   6
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
+   4.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.1.  Normative References  . . . . . . . . . . . . . . . . . .   3
+     4.2.  Informative References  . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
 
@@ -105,6 +102,9 @@ Table of Contents
 
    o  &#26082;&#23384;&#32202;&#24613;&#36890;&#22577;&#12398;&#12513;&#
       12459;&#12491;&#12474;&#12512;&#12399;&#38480;&#23450;&#30340;&#12
+      394;&#29872;&#22659;&#12391;&#12375;&#12363;&#21205;&#20316;&#1237
+      5;&#12394;&#12356;
+
 
 
 
@@ -113,9 +113,6 @@ Nakajima               Expires September 10, 2015               [Page 2]
 
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
-
-      394;&#29872;&#22659;&#12391;&#12375;&#12363;&#21205;&#20316;&#1237
-      5;&#12394;&#12356;
 
    o  &#27161;&#28310;&#21270;&#12373;&#12428;&#12383;&#12450;&#12503;&#
       12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#36890;&#30693;&#12
@@ -148,125 +145,9 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
    Application Important notification delivery e.g. rtcweb incoming call
 
-4.  Categorized push subscription
+4.  References
 
-   A new header field "Push-Category" is provided in subscribe request
-   to indicate priority of new subscription.
-
-   POST /subscribe/1G_GIPMorg_n-IrQvqZr6g HTTP/1.1
-   Host: push.example.net
-   Push-Category: Normal
-
-   Figure 1: Example of push subscribe request with Push-Category header
-
-   The "Push-Category" HTTP header field is an OPTIONAL header field
-   that, when used, indicates a priority of push subscription and its
-   delivery.
-
-
-
-Nakajima               Expires September 10, 2015               [Page 3]
-
-Internet-DrafProblem Statement and Requirements for Web Push  March 2015
-
-
-   The following categories are defined:
-
-   normal: "normal" category indicates that push subscription
-
-   important: "important" category indicates that push channel MUST be
-   delivered prior to "normal" push channel.  Application MUST send a
-   push message with stream which has a higher weight compared to
-   Default stream priorities defined at [I-D.ietf-httpbis-http2].
-
-       +-------+           +--------------+       +-------------+
-       |  UA   |           | Push Service |       | Application |
-       +-------+           +--------------+       +-------------+
-           |                      |                      |
-           |      Register        |                      |
-           |--------------------->|                      |
-           |       Monitor        |                      |
-           |<====================>|                      |
-           |      Subscribe       |                      |
-           |--------------------->|                      |
-           |           Provide Subscription              |
-           |-------------------------------------------->|
-           |                      |                      |
-           :                      :                      :
-           |                      |     Push Message     |
-           |                      | with PRIORITY header |
-           |    Push Message      |<---------------------|
-           |<---------------------|                      |
-           |                      |                      |
-
-   emergency: "emergency" category indicates that push channel MUST be
-   delivered prior to any other categorized or uncategorized push
-   channel.  User Agent MUST send a aggregated channel creation request
-   [I-D.thomson-webpush-aggregate].  Application MUST send a push
-   message with stream which has a highest weight compared to other
-   stream on the connection.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Nakajima               Expires September 10, 2015               [Page 4]
-
-Internet-DrafProblem Statement and Requirements for Web Push  March 2015
-
-
-       +-------+           +--------------+       +-------------+
-       |  UA   |           | Push Service |       | Application |
-       +-------+           +--------------+       +-------------+
-           |                      |                      |
-           |      Register        |                      |
-           |--------------------->|                      |
-           |       Monitor        |                      |
-           |<====================>|                      |
-           |      Subscribe       |                      |
-           | (Aggregated Channel) |                      |
-           |--------------------->|                      |
-           |           Provide Subscription              |
-           |-------------------------------------------->|
-           |                      |                      |
-           :                      :                      :
-           |                      |     Push Message     |
-           |                      | with PRIORITY header |
-           |    Push Message      |<---------------------|
-           |<---------------------|                      |
-           |                      |                      |
-
-5.  Security Considerations
-
-6.  IANA Considerations
-
-   This document specifies the HTTP header field listed below, which has
-   been added to the "Permanent Message Header Field Names" registry
-   defined in [RFC3864].
-
-   Header field: Push-Catagory
-   Applicable protocol: http
-   Status: standard
-   Auther/Change controller:
-     IETF (iesg@ietf.org)
-     Internet Engineering Task Force
-   Specification document(s): this specification
-   Related information: None
-
-7.  References
-
-7.1.  Normative References
+4.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997.
@@ -275,16 +156,19 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
               Procedures for Message Header Fields", BCP 90, RFC 3864,
               September 2004.
 
+4.2.  Informative References
+
+   [API]      "Web Push API", n.d., <https://w3c.github.io/push-api/>.
 
 
-Nakajima               Expires September 10, 2015               [Page 5]
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 3]
 
 Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
-
-7.2.  Informative References
-
-   [API]      "Web Push API", n.d., <https://w3c.github.io/push-api/>.
 
    [I-D.ietf-httpbis-http2]
               Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
@@ -333,4 +217,8 @@ Author's Address
 
 
 
-Nakajima               Expires September 10, 2015               [Page 6]
+
+
+
+
+Nakajima               Expires September 10, 2015               [Page 4]
