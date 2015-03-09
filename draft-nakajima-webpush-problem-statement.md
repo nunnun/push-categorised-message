@@ -94,10 +94,11 @@ The meaning of these is described in {{RFC2119}}.
 
 ## Use case of Web Push Emergency Alerting Notification
 
-Web-based Signage
-Digital signage has widely deployed among the unverse. Signages located at public area such as train station or street play a significant role in natural disaster or accident by providing the evacuation alert or correct informations. Recent few years W3C worked on Web-based signage which has Web browser is embedded, allowing to display or play Web content. Disaster use case is proposed in W3C Web-based Signage Scenarios and Use Cases {{SignageUseCase}}. 
+There are two potential use case of Web Push Emergency Alerting notification. 
 
-- OTT emergency alerting system (local goverment or authorities)
+The first use case is a Web-based Signage. Digital signage has widely deployed among the unverse. Signages located at public area such as train station or street play a significant role in natural disaster or accident by providing the evacuation alert or correct informations. Recent few years W3C worked on Web-based signage which has Web browser is embedded, allowing to display or play Web content. Disaster use case is proposed in W3C Web-based Signage Scenarios and Use Cases {{SignageUseCase}}. 
+
+The second use case is an over-the-top emergency alerting system operated by a local authorities or a government. An emgergency alerting of a major natural disaster such as an earthquake or a tsunami could be distributed by existing emergency alerting system (e.g. PWS). However, 
 
 ## Non-emergency, Important notification
 
