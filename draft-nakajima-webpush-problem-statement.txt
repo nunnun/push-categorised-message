@@ -83,7 +83,7 @@ Table of Contents
    The delivery of real-time events such as incoming calls or messages
    is an essential feature of mobile application and its platform.  The
    Web Push [I-D.thomson-webpush-http2] protocol has been proposed to
-   enable delierying the events required by W3C Web Push API [API].
+   enable delierying the events required by W3C Web Push API [PushAPI].
 
    Also, emergency alerting is an apparently important feature of
    telecommunication network such as cellular networks, allowing the
@@ -177,8 +177,6 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
 
 6.2.  Informative References
 
-   [API]      "Web Push API", n.d., <https://w3c.github.io/push-api/>.
-
    [CAP]      "Common Alerting Protocol v1.2", July 2010.
 
    [I-D.ietf-httpbis-http2]
@@ -198,6 +196,8 @@ Internet-DrafProblem Statement and Requirements for Web Push  March 2015
               requirements-Part II: Wireless LAN Medium Access Control
               (MAC) and Physical Layer (PHY) specifications: Amendment
               9: Interworking with External Networks", February 2011.
+
+   [PushAPI]  "Web Push API", n.d., <https://w3c.github.io/push-api/>.
 
    [_3GPP.22.268]
               3GPP, "Public Warning System (PWS) requirements", 3GPP TS
