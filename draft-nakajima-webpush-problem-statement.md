@@ -60,9 +60,9 @@ informative:
 --- abstract
 
 The Web Push protocol provides a means of delivering the events to clients based
-on the registration made by the application. Also, the emergency alert
-notification system has been developed and deployed widely with mobile phones or
-smartphones, but has not deployed to Web-only devices.
+on the registration and resource subscription made by the application. Also, the
+emergency alert notification system has been developed and deployed widely with
+mobile phones or smartphones, but has not deployed to Web-only devices.
 
 This document outlines various existing emergency alert notification system in
 other protocols and use cases with their requirements.
